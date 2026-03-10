@@ -887,5 +887,575 @@ const featureDetails = {
                 </div>
             `
         }
+    },
+
+    // ========================================
+    // Tech Stack Detail Data
+    // ========================================
+
+    'tech-langgraph': {
+        icon: '🔄',
+        title: { ko: 'LangGraph — 상태 기반 워크플로우 엔진', en: 'LangGraph — State-based Workflow Engine' },
+        body: {
+            ko: `
+                <p><strong>LangGraph</strong>는 플랫폼의 <strong>상태 기반 멀티에이전트 워크플로우 엔진</strong>으로, StateGraph를 통해 8개 노드 간의 복잡한 실행 흐름을 제어합니다. 조건부 엣지(Conditional Edge)를 활용하여 품질 검증 실패 시 자동 재시도하며, 각 노드의 실행 상태를 추적합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p>AX 컨설팅의 <strong>5단계 분석 파이프라인을 상태 그래프로 모델링</strong>하여, 산업 분석 → 성숙도 평가 → 유스케이스 발굴 → ROI 분석 → 보고서 생성까지의 전체 흐름을 자동화합니다. 각 단계의 출력이 다음 단계의 입력으로 정확히 전달되도록 상태를 관리합니다.</p>
+
+                <h3>핵심 구성 요소</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>구성 요소</th><th>역할</th><th>상세</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>StateGraph</strong></td><td>워크플로우 정의</td><td>8개 노드, 조건부 엣지로 분기 제어</td></tr>
+                            <tr><td><strong>ConsultingState</strong></td><td>상태 스키마</td><td>TypedDict 기반, 단계별 결과 누적 관리</td></tr>
+                            <tr><td><strong>quality_gate</strong></td><td>품질 검증 노드</td><td>점수 기반 자동 재시도 (max 2회)</td></tr>
+                            <tr><td><strong>Conditional Edge</strong></td><td>분기 제어</td><td>품질 통과/실패에 따른 동적 라우팅</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>워크플로우 노드 구성</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">initialize</span>
+                    <span class="modal-chip">industry_analysis</span>
+                    <span class="modal-chip">maturity_assessment</span>
+                    <span class="modal-chip">usecase_discovery</span>
+                    <span class="modal-chip">roi_analysis</span>
+                    <span class="modal-chip">risk_assessment</span>
+                    <span class="modal-chip">quality_gate</span>
+                    <span class="modal-chip">report_generation</span>
+                </div>
+            `,
+            en: `
+                <p><strong>LangGraph</strong> serves as the platform's <strong>state-based multi-agent workflow engine</strong>, controlling complex execution flows across 8 nodes via StateGraph. It uses Conditional Edges for automatic retry on quality validation failure and tracks execution state at each node.</p>
+
+                <h3>Platform Mission</h3>
+                <p>Models the <strong>5-stage AX consulting analysis pipeline as a state graph</strong>, automating the entire flow from industry analysis → maturity assessment → use case discovery → ROI analysis → report generation. Manages state to ensure each stage's output is precisely passed as input to the next.</p>
+
+                <h3>Core Components</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Component</th><th>Role</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>StateGraph</strong></td><td>Workflow Definition</td><td>8 nodes, conditional edges for branch control</td></tr>
+                            <tr><td><strong>ConsultingState</strong></td><td>State Schema</td><td>TypedDict-based, cumulative stage results</td></tr>
+                            <tr><td><strong>quality_gate</strong></td><td>Quality Check Node</td><td>Score-based auto-retry (max 2 times)</td></tr>
+                            <tr><td><strong>Conditional Edge</strong></td><td>Branch Control</td><td>Dynamic routing on pass/fail quality</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Workflow Nodes</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">initialize</span>
+                    <span class="modal-chip">industry_analysis</span>
+                    <span class="modal-chip">maturity_assessment</span>
+                    <span class="modal-chip">usecase_discovery</span>
+                    <span class="modal-chip">roi_analysis</span>
+                    <span class="modal-chip">risk_assessment</span>
+                    <span class="modal-chip">quality_gate</span>
+                    <span class="modal-chip">report_generation</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-crewai': {
+        icon: '🤖',
+        title: { ko: 'CrewAI — 역할 기반 에이전트 협업', en: 'CrewAI — Role-based Agent Collaboration' },
+        body: {
+            ko: `
+                <p><strong>CrewAI</strong>는 플랫폼에서 <strong>5명의 전문 에이전트가 6개의 태스크를 역할 분담하여 협업</strong>하는 프레임워크입니다. 각 에이전트에게 명확한 역할(Role), 목표(Goal), 배경(Backstory)을 부여하여 산업 도메인 전문가처럼 동작합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>AX 컨설팅팀을 AI로 재현</strong>합니다. 산업 분석가, 성숙도 평가사, 기회 발굴가, 전략 설계사, 보고서 작성가가 각자의 전문 영역에서 분석하고 결과를 다음 에이전트에게 전달하는 Sequential/Hierarchical 프로세스를 운영합니다.</p>
+
+                <h3>에이전트 구성</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>에이전트</th><th>역할</th><th>담당 태스크</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Industry Analyst</strong></td><td>산업 분석가</td><td>산업 동향, 경쟁 환경, AI 적용 현황 분석</td></tr>
+                            <tr><td><strong>Maturity Assessor</strong></td><td>성숙도 평가사</td><td>4차원 AI 성숙도 레벨 평가</td></tr>
+                            <tr><td><strong>Opportunity Hunter</strong></td><td>기회 발굴가</td><td>AI 적용 유스케이스 발굴 및 우선순위</td></tr>
+                            <tr><td><strong>Strategy Architect</strong></td><td>전략 설계사</td><td>3 시나리오 ROI/리스크 분석</td></tr>
+                            <tr><td><strong>Report Writer</strong></td><td>보고서 작성가</td><td>최종 컨설팅 보고서 생성</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>프로세스 모드</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Sequential Process</span>
+                    <span class="modal-chip">Hierarchical Process</span>
+                    <span class="modal-chip">5 Agents</span>
+                    <span class="modal-chip">6 Tasks</span>
+                    <span class="modal-chip">Ollama LLM</span>
+                </div>
+            `,
+            en: `
+                <p><strong>CrewAI</strong> enables <strong>5 specialized agents collaborating on 6 tasks through role-based division</strong>. Each agent is assigned a clear Role, Goal, and Backstory, making them operate like industry domain experts.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Recreates an AX consulting team with AI</strong>. Industry analyst, maturity assessor, opportunity hunter, strategy architect, and report writer each analyze within their expertise and pass results to the next agent via Sequential/Hierarchical processes.</p>
+
+                <h3>Agent Configuration</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Agent</th><th>Role</th><th>Tasks</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Industry Analyst</strong></td><td>Industry Analysis</td><td>Industry trends, competitive landscape, AI adoption</td></tr>
+                            <tr><td><strong>Maturity Assessor</strong></td><td>Maturity Evaluation</td><td>4-dimension AI maturity level assessment</td></tr>
+                            <tr><td><strong>Opportunity Hunter</strong></td><td>Opportunity Discovery</td><td>AI use case discovery & prioritization</td></tr>
+                            <tr><td><strong>Strategy Architect</strong></td><td>Strategy Design</td><td>3-scenario ROI/risk analysis</td></tr>
+                            <tr><td><strong>Report Writer</strong></td><td>Report Generation</td><td>Final consulting report creation</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Process Modes</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Sequential Process</span>
+                    <span class="modal-chip">Hierarchical Process</span>
+                    <span class="modal-chip">5 Agents</span>
+                    <span class="modal-chip">6 Tasks</span>
+                    <span class="modal-chip">Ollama LLM</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-autogen': {
+        icon: '💬',
+        title: { ko: 'AutoGen AG2 — 그룹챗 기반 합의 시스템', en: 'AutoGen AG2 — GroupChat Consensus System' },
+        body: {
+            ko: `
+                <p><strong>AutoGen AG2</strong>는 플랫폼에서 <strong>5명의 에이전트가 그룹채팅 형식으로 토론하며 합의에 도달</strong>하는 프레임워크입니다. RoundRobin과 Selector 모드를 지원하며, 각 에이전트가 다른 에이전트의 분석에 대해 피드백하고 보완합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>다각도 관점의 AX 컨설팅 토론을 자동화</strong>합니다. 산업 전문가, 기술 전문가, 전략 전문가가 서로의 분석을 검토하고 보완하여 단일 에이전트보다 더 풍부하고 균형 잡힌 컨설팅 결과를 도출합니다. 합의 기반 의사결정으로 편향을 방지합니다.</p>
+
+                <h3>그룹챗 구성</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>구성 요소</th><th>역할</th><th>상세</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>GroupChat</strong></td><td>대화 관리</td><td>최대 12라운드, 에이전트 간 메시지 교환</td></tr>
+                            <tr><td><strong>GroupChatManager</strong></td><td>진행 관리</td><td>발언 순서 제어, 종료 조건 감시</td></tr>
+                            <tr><td><strong>RoundRobin</strong></td><td>순차 발언</td><td>모든 에이전트가 순서대로 발언</td></tr>
+                            <tr><td><strong>Selector</strong></td><td>선택적 발언</td><td>LLM이 최적 발언자 동적 선택</td></tr>
+                            <tr><td><strong>Termination</strong></td><td>종료 조건</td><td>"TERMINATE" 키워드 감지</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>참여 에이전트</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Industry Analyst</span>
+                    <span class="modal-chip">Maturity Assessor</span>
+                    <span class="modal-chip">Use Case Designer</span>
+                    <span class="modal-chip">ROI Analyst</span>
+                    <span class="modal-chip">Report Synthesizer</span>
+                </div>
+            `,
+            en: `
+                <p><strong>AutoGen AG2</strong> enables <strong>5 agents to discuss and reach consensus through group chat</strong>. Supports RoundRobin and Selector modes, where each agent provides feedback and complements other agents' analyses.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Automates multi-perspective AX consulting discussions</strong>. Industry, technology, and strategy experts review and complement each other's analyses, producing richer, more balanced consulting results than single-agent approaches. Consensus-based decision-making prevents bias.</p>
+
+                <h3>GroupChat Configuration</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Component</th><th>Role</th><th>Details</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>GroupChat</strong></td><td>Dialog Management</td><td>Max 12 rounds, inter-agent message exchange</td></tr>
+                            <tr><td><strong>GroupChatManager</strong></td><td>Session Control</td><td>Turn order control, termination monitoring</td></tr>
+                            <tr><td><strong>RoundRobin</strong></td><td>Sequential Turns</td><td>All agents speak in order</td></tr>
+                            <tr><td><strong>Selector</strong></td><td>Dynamic Turns</td><td>LLM dynamically selects optimal speaker</td></tr>
+                            <tr><td><strong>Termination</strong></td><td>Exit Condition</td><td>"TERMINATE" keyword detection</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Participating Agents</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Industry Analyst</span>
+                    <span class="modal-chip">Maturity Assessor</span>
+                    <span class="modal-chip">Use Case Designer</span>
+                    <span class="modal-chip">ROI Analyst</span>
+                    <span class="modal-chip">Report Synthesizer</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-dspy': {
+        icon: '⚡',
+        title: { ko: 'DSPy — 프롬프트 자동 최적화 엔진', en: 'DSPy — Automatic Prompt Optimization Engine' },
+        body: {
+            ko: `
+                <p><strong>DSPy</strong>는 플랫폼에서 <strong>5개의 Signature와 5개의 Chain of Thought 모듈로 프롬프트를 프로그래밍 방식으로 최적화</strong>합니다. 수작업 프롬프트 엔지니어링 대신 선언적으로 입출력을 정의하면 DSPy가 최적의 프롬프트를 자동 구성합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>AX 컨설팅 분석의 정확도를 프로그래밍 방식으로 극대화</strong>합니다. 산업 분석, 성숙도 평가 등 각 단계에 특화된 Signature를 정의하고, Chain of Thought 추론으로 단계별 논리적 분석을 강제합니다. 프롬프트를 코드처럼 관리하여 재현 가능한 컨설팅 품질을 보장합니다.</p>
+
+                <h3>Signature & Module 구성</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Signature</th><th>입력</th><th>출력</th><th>CoT 모듈</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>IndustryAnalysis</strong></td><td>산업, 규모, 현황</td><td>동향, 경쟁, AI현황</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>MaturityAssessment</strong></td><td>산업, 현황, 분석</td><td>4차원 점수, 레벨</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>UseCaseDiscovery</strong></td><td>산업, 성숙도</td><td>기회 목록, Top-3</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>ROIAnalysis</strong></td><td>유스케이스, 규모</td><td>NPV, IRR, 회수기간</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>ReportGeneration</strong></td><td>전체 분석 결과</td><td>구조화된 보고서</td><td>dspy.ChainOfThought</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>핵심 특장점</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">5 Signatures</span>
+                    <span class="modal-chip">5 CoT Modules</span>
+                    <span class="modal-chip">선언적 프롬프트</span>
+                    <span class="modal-chip">자동 최적화</span>
+                    <span class="modal-chip">재현 가능성</span>
+                </div>
+            `,
+            en: `
+                <p><strong>DSPy</strong> provides <strong>programmatic prompt optimization with 5 Signatures and 5 Chain of Thought modules</strong>. Instead of manual prompt engineering, you declaratively define inputs/outputs and DSPy automatically constructs optimal prompts.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Programmatically maximizes AX consulting analysis accuracy</strong>. Defines specialized Signatures for each stage (industry analysis, maturity assessment, etc.) and enforces step-by-step logical analysis through Chain of Thought reasoning. Manages prompts like code to ensure reproducible consulting quality.</p>
+
+                <h3>Signature & Module Configuration</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Signature</th><th>Input</th><th>Output</th><th>CoT Module</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>IndustryAnalysis</strong></td><td>Industry, size, status</td><td>Trends, competition, AI status</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>MaturityAssessment</strong></td><td>Industry, status, analysis</td><td>4-dim scores, level</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>UseCaseDiscovery</strong></td><td>Industry, maturity</td><td>Opportunity list, Top-3</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>ROIAnalysis</strong></td><td>Use cases, scale</td><td>NPV, IRR, payback</td><td>dspy.ChainOfThought</td></tr>
+                            <tr><td><strong>ReportGeneration</strong></td><td>All analysis results</td><td>Structured report</td><td>dspy.ChainOfThought</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Key Advantages</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">5 Signatures</span>
+                    <span class="modal-chip">5 CoT Modules</span>
+                    <span class="modal-chip">Declarative Prompts</span>
+                    <span class="modal-chip">Auto-optimization</span>
+                    <span class="modal-chip">Reproducibility</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-langchain': {
+        icon: '🔗',
+        title: { ko: 'LangChain — LCEL 체인 파이프라인', en: 'LangChain — LCEL Chain Pipeline' },
+        body: {
+            ko: `
+                <p><strong>LangChain</strong>은 플랫폼에서 <strong>5개의 LCEL(LangChain Expression Language) 체인으로 분석 파이프라인</strong>을 구성합니다. 각 체인은 프롬프트 → LLM → 출력 파서를 연결하며, ChatHistory와 Callbacks 시스템으로 대화 맥락과 실행 추적을 관리합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>AX 컨설팅의 각 분석 단계를 독립적인 체인으로 모듈화</strong>합니다. LCEL의 파이프(|) 연산자로 프롬프트 템플릿 → Ollama LLM → JSON 파서를 깔끔하게 연결하여, 각 체인이 구조화된 분석 결과를 생성합니다. 대화형 컨설팅 세션에서 맥락을 유지합니다.</p>
+
+                <h3>체인 구성</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>체인</th><th>역할</th><th>출력</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Industry Chain</strong></td><td>산업 분석</td><td>산업 동향, AI 적용 현황 JSON</td></tr>
+                            <tr><td><strong>Maturity Chain</strong></td><td>성숙도 평가</td><td>4차원 점수, 레벨 JSON</td></tr>
+                            <tr><td><strong>UseCase Chain</strong></td><td>유스케이스 발굴</td><td>기회 목록, 우선순위 JSON</td></tr>
+                            <tr><td><strong>ROI Chain</strong></td><td>ROI 분석</td><td>NPV, IRR, 시나리오 JSON</td></tr>
+                            <tr><td><strong>Report Chain</strong></td><td>보고서 생성</td><td>구조화된 컨설팅 보고서</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>기술 스택</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">LCEL Pipeline</span>
+                    <span class="modal-chip">ChatPromptTemplate</span>
+                    <span class="modal-chip">ChatOllama</span>
+                    <span class="modal-chip">StrOutputParser</span>
+                    <span class="modal-chip">ChatHistory</span>
+                    <span class="modal-chip">Callbacks</span>
+                </div>
+            `,
+            en: `
+                <p><strong>LangChain</strong> constructs the platform's <strong>analysis pipeline with 5 LCEL (LangChain Expression Language) chains</strong>. Each chain connects Prompt → LLM → Output Parser, with ChatHistory and Callbacks systems managing conversation context and execution tracking.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Modularizes each AX consulting analysis stage as an independent chain</strong>. Uses LCEL's pipe (|) operator to cleanly connect prompt templates → Ollama LLM → JSON parser, with each chain producing structured analysis results. Maintains context across conversational consulting sessions.</p>
+
+                <h3>Chain Configuration</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Chain</th><th>Role</th><th>Output</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Industry Chain</strong></td><td>Industry Analysis</td><td>Industry trends, AI status JSON</td></tr>
+                            <tr><td><strong>Maturity Chain</strong></td><td>Maturity Assessment</td><td>4-dimension scores, level JSON</td></tr>
+                            <tr><td><strong>UseCase Chain</strong></td><td>Use Case Discovery</td><td>Opportunity list, priorities JSON</td></tr>
+                            <tr><td><strong>ROI Chain</strong></td><td>ROI Analysis</td><td>NPV, IRR, scenario JSON</td></tr>
+                            <tr><td><strong>Report Chain</strong></td><td>Report Generation</td><td>Structured consulting report</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Tech Stack</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">LCEL Pipeline</span>
+                    <span class="modal-chip">ChatPromptTemplate</span>
+                    <span class="modal-chip">ChatOllama</span>
+                    <span class="modal-chip">StrOutputParser</span>
+                    <span class="modal-chip">ChatHistory</span>
+                    <span class="modal-chip">Callbacks</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-llamaindex': {
+        icon: '📚',
+        title: { ko: 'LlamaIndex — ISO 표준 기반 RAG 시스템', en: 'LlamaIndex — ISO Standards RAG System' },
+        body: {
+            ko: `
+                <p><strong>LlamaIndex</strong>는 플랫폼의 <strong>RAG(Retrieval-Augmented Generation) 시스템</strong>으로, 4개의 ISO 국제 표준 문서를 벡터 인덱싱하여 컨설팅 분석에 표준 기반 근거를 제공합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>AX 컨설팅의 신뢰성과 전문성을 ISO 국제 표준으로 뒷받침</strong>합니다. 성숙도 평가 시 ISO/IEC 42001 기준을, 유스케이스 설계 시 ISO 23894 리스크 프레임워크를, 보고서 작성 시 ISO 표준 포맷을 자동으로 참조하여 국제 기준에 부합하는 컨설팅 결과를 생성합니다.</p>
+
+                <h3>지원 ISO 표준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>표준</th><th>명칭</th><th>활용 단계</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ISO/IEC 42001</strong></td><td>AI 관리 시스템</td><td>성숙도 평가, 거버넌스 설계</td></tr>
+                            <tr><td><strong>ISO/IEC 23894</strong></td><td>AI 리스크 관리</td><td>리스크 평가, 완화 전략</td></tr>
+                            <tr><td><strong>ISO/IEC 25059</strong></td><td>AI 시스템 품질</td><td>품질 검증, 보고서 포맷</td></tr>
+                            <tr><td><strong>ISO/IEC 38507</strong></td><td>AI 거버넌스</td><td>전략 제안, 조직 설계</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>RAG 파이프라인</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Document Loader</span>
+                    <span class="modal-chip">Text Splitter</span>
+                    <span class="modal-chip">Vector Embedding</span>
+                    <span class="modal-chip">Index Store</span>
+                    <span class="modal-chip">Query Engine</span>
+                    <span class="modal-chip">Response Synthesis</span>
+                </div>
+            `,
+            en: `
+                <p><strong>LlamaIndex</strong> serves as the platform's <strong>RAG (Retrieval-Augmented Generation) system</strong>, vector-indexing 4 ISO international standard documents to provide standards-based evidence for consulting analyses.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Backs AX consulting credibility and expertise with ISO international standards</strong>. Automatically references ISO/IEC 42001 criteria during maturity assessment, ISO 23894 risk framework for use case design, and ISO standard formats for report writing — producing consulting results that comply with international standards.</p>
+
+                <h3>Supported ISO Standards</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Standard</th><th>Title</th><th>Applied Stage</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ISO/IEC 42001</strong></td><td>AI Management System</td><td>Maturity assessment, governance design</td></tr>
+                            <tr><td><strong>ISO/IEC 23894</strong></td><td>AI Risk Management</td><td>Risk assessment, mitigation strategy</td></tr>
+                            <tr><td><strong>ISO/IEC 25059</strong></td><td>AI System Quality</td><td>Quality validation, report format</td></tr>
+                            <tr><td><strong>ISO/IEC 38507</strong></td><td>AI Governance</td><td>Strategy proposals, org design</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>RAG Pipeline</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Document Loader</span>
+                    <span class="modal-chip">Text Splitter</span>
+                    <span class="modal-chip">Vector Embedding</span>
+                    <span class="modal-chip">Index Store</span>
+                    <span class="modal-chip">Query Engine</span>
+                    <span class="modal-chip">Response Synthesis</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-ollama': {
+        icon: '🦙',
+        title: { ko: 'Ollama — 로컬 LLM 추론 백본', en: 'Ollama — Local LLM Inference Backbone' },
+        body: {
+            ko: `
+                <p><strong>Ollama</strong>는 플랫폼의 <strong>핵심 LLM 추론 엔진</strong>으로, 모든 7개 멀티에이전트 프레임워크의 기본 언어 모델 백엔드입니다. 클라우드 API 의존 없이 로컬에서 완전한 AI 컨설팅을 실행할 수 있게 합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>데이터 주권과 비용 효율성을 보장하는 로컬 AI 인프라</strong>입니다. 기업의 민감한 산업 데이터와 전략 정보가 외부 서버로 전송되지 않으며, API 호출 비용 없이 무제한 컨설팅 세션을 운영할 수 있습니다. Claude 온라인 API의 폴백으로도 동작하여 하이브리드 LLM 아키텍처를 구성합니다.</p>
+
+                <h3>플랫폼 내 활용</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>프레임워크</th><th>Ollama 활용 방식</th><th>모델</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>LangGraph</strong></td><td>각 노드의 LLM 호출</td><td>llama3.1 / mistral</td></tr>
+                            <tr><td><strong>CrewAI</strong></td><td>에이전트별 LLM 백엔드</td><td>llama3.1</td></tr>
+                            <tr><td><strong>AutoGen AG2</strong></td><td>그룹챗 에이전트 추론</td><td>llama3.1</td></tr>
+                            <tr><td><strong>DSPy</strong></td><td>CoT 모듈 실행</td><td>llama3.1</td></tr>
+                            <tr><td><strong>LangChain</strong></td><td>ChatOllama 체인</td><td>llama3.1</td></tr>
+                            <tr><td><strong>LlamaIndex</strong></td><td>RAG 응답 생성</td><td>llama3.1</td></tr>
+                            <tr><td><strong>Native</strong></td><td>순차 에이전트 추론</td><td>llama3.1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>핵심 장점</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">데이터 주권 보장</span>
+                    <span class="modal-chip">API 비용 Zero</span>
+                    <span class="modal-chip">오프라인 동작</span>
+                    <span class="modal-chip">Hybrid LLM 폴백</span>
+                    <span class="modal-chip">무제한 추론</span>
+                </div>
+            `,
+            en: `
+                <p><strong>Ollama</strong> is the platform's <strong>core LLM inference engine</strong>, serving as the default language model backend for all 7 multi-agent frameworks. Enables complete AI consulting execution locally without cloud API dependency.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Local AI infrastructure ensuring data sovereignty and cost efficiency</strong>. Sensitive industry data and strategic information never leave the local server, and unlimited consulting sessions run without API call costs. Also functions as a fallback for Claude online API, forming a hybrid LLM architecture.</p>
+
+                <h3>Platform Integration</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Framework</th><th>Ollama Usage</th><th>Model</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>LangGraph</strong></td><td>LLM calls per node</td><td>llama3.1 / mistral</td></tr>
+                            <tr><td><strong>CrewAI</strong></td><td>Per-agent LLM backend</td><td>llama3.1</td></tr>
+                            <tr><td><strong>AutoGen AG2</strong></td><td>GroupChat agent inference</td><td>llama3.1</td></tr>
+                            <tr><td><strong>DSPy</strong></td><td>CoT module execution</td><td>llama3.1</td></tr>
+                            <tr><td><strong>LangChain</strong></td><td>ChatOllama chains</td><td>llama3.1</td></tr>
+                            <tr><td><strong>LlamaIndex</strong></td><td>RAG response generation</td><td>llama3.1</td></tr>
+                            <tr><td><strong>Native</strong></td><td>Sequential agent inference</td><td>llama3.1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Key Advantages</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Data Sovereignty</span>
+                    <span class="modal-chip">Zero API Cost</span>
+                    <span class="modal-chip">Offline Operation</span>
+                    <span class="modal-chip">Hybrid LLM Fallback</span>
+                    <span class="modal-chip">Unlimited Inference</span>
+                </div>
+            `
+        }
+    },
+
+    'tech-fastapi': {
+        icon: '🚀',
+        title: { ko: 'FastAPI — 비동기 REST API 게이트웨이', en: 'FastAPI — Async REST API Gateway' },
+        body: {
+            ko: `
+                <p><strong>FastAPI</strong>는 플랫폼의 <strong>REST API 게이트웨이</strong>로, 171개의 엔드포인트를 통해 모든 멀티에이전트 프레임워크와 서비스를 통합 제공합니다. 비동기(async/await) 처리로 동시 다중 컨설팅 세션을 효율적으로 관리합니다.</p>
+
+                <h3>플랫폼 전문 임무</h3>
+                <p><strong>7개 멀티에이전트 프레임워크의 통합 접근점</strong>입니다. 프론트엔드 애플리케이션, 외부 시스템, API 클라이언트가 단일 REST API를 통해 모든 AX 컨설팅 기능에 접근합니다. 자동 OpenAPI(Swagger) 문서 생성, Pydantic 기반 요청/응답 검증, 미들웨어 기반 인증과 로깅을 제공합니다.</p>
+
+                <h3>라우터 그룹</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>라우터</th><th>엔드포인트 수</th><th>주요 기능</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Consulting</strong></td><td>핵심 API</td><td>컨설팅 세션 생성, 실행, 결과 조회</td></tr>
+                            <tr><td><strong>Frameworks</strong></td><td>7개 프레임워크</td><td>LangGraph/CrewAI/AutoGen/DSPy/LangChain/LlamaIndex/Native</td></tr>
+                            <tr><td><strong>Reports</strong></td><td>보고서 API</td><td>보고서 생성, 다운로드 (DOCX/PDF/PPTX)</td></tr>
+                            <tr><td><strong>Standards</strong></td><td>ISO 표준</td><td>ISO 문서 검색, RAG 질의</td></tr>
+                            <tr><td><strong>Analytics</strong></td><td>분석 API</td><td>ROI 계산, 성숙도 평가, 리스크 분석</td></tr>
+                            <tr><td><strong>System</strong></td><td>시스템</td><td>헬스체크, 설정, 모니터링</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>기술 특장점</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">171 Endpoints</span>
+                    <span class="modal-chip">Async/Await</span>
+                    <span class="modal-chip">Pydantic Validation</span>
+                    <span class="modal-chip">Auto Swagger Docs</span>
+                    <span class="modal-chip">CORS Middleware</span>
+                    <span class="modal-chip">JWT Authentication</span>
+                </div>
+            `,
+            en: `
+                <p><strong>FastAPI</strong> serves as the platform's <strong>REST API gateway</strong>, providing unified access to all multi-agent frameworks and services through 171 endpoints. Async/await processing efficiently manages concurrent multi-session consulting.</p>
+
+                <h3>Platform Mission</h3>
+                <p><strong>Unified access point for all 7 multi-agent frameworks</strong>. Frontend applications, external systems, and API clients access all AX consulting capabilities through a single REST API. Provides automatic OpenAPI (Swagger) documentation, Pydantic-based request/response validation, and middleware-based authentication and logging.</p>
+
+                <h3>Router Groups</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Router</th><th>Endpoints</th><th>Key Functions</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Consulting</strong></td><td>Core API</td><td>Session creation, execution, result retrieval</td></tr>
+                            <tr><td><strong>Frameworks</strong></td><td>7 Frameworks</td><td>LangGraph/CrewAI/AutoGen/DSPy/LangChain/LlamaIndex/Native</td></tr>
+                            <tr><td><strong>Reports</strong></td><td>Report API</td><td>Report generation, download (DOCX/PDF/PPTX)</td></tr>
+                            <tr><td><strong>Standards</strong></td><td>ISO Standards</td><td>ISO document search, RAG queries</td></tr>
+                            <tr><td><strong>Analytics</strong></td><td>Analytics API</td><td>ROI calculation, maturity, risk analysis</td></tr>
+                            <tr><td><strong>System</strong></td><td>System</td><td>Health check, config, monitoring</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Technical Highlights</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">171 Endpoints</span>
+                    <span class="modal-chip">Async/Await</span>
+                    <span class="modal-chip">Pydantic Validation</span>
+                    <span class="modal-chip">Auto Swagger Docs</span>
+                    <span class="modal-chip">CORS Middleware</span>
+                    <span class="modal-chip">JWT Authentication</span>
+                </div>
+            `
+        }
     }
 };
