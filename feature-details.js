@@ -893,6 +893,467 @@ const featureDetails = {
     // Tech Stack Detail Data
     // ========================================
 
+    // ========================================
+    // Certification Level Detail Data
+    // ========================================
+
+    'cert-beginner': {
+        icon: '🌱',
+        title: { ko: 'Level 1: 입문자 (AX Beginner)', en: 'Level 1: AX Beginner' },
+        body: {
+            ko: `
+                <p><strong>AX Beginner</strong>는 AI 전환(AX)의 첫걸음을 내딛는 단계입니다. AI의 기본 개념을 이해하고, 자신의 업무에서 AI를 적용할 수 있는 <strong>AX 마인드셋</strong>을 형성합니다. 플랫폼의 기초 도구를 활용하여 간단한 AX 과제를 수행합니다.</p>
+
+                <h3>도달 기준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>평가 항목</th><th>기준</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>완료 과제 수</strong></td><td>5건 이상</td><td>기본 AX 과제 완료</td></tr>
+                            <tr><td><strong>ROI 달성 과제</strong></td><td>0건 (없음)</td><td>ROI 달성 요구 없음</td></tr>
+                            <tr><td><strong>부서 전환율</strong></td><td>0% (없음)</td><td>전환율 요구 없음</td></tr>
+                            <tr><td><strong>외부 컨설팅</strong></td><td>불필요</td><td>외부 경험 요구 없음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>학습 내용</h3>
+                <ul>
+                    <li><strong>AI/AX 개념 이해</strong> — AI, 머신러닝, 생성형AI의 기본 개념과 AX(AI Transformation)의 의미</li>
+                    <li><strong>플랫폼 기본 사용법</strong> — 100K-AX Expert 플랫폼의 인터페이스와 기본 기능 습득</li>
+                    <li><strong>AX 마인드셋 형성</strong> — "내 업무에서 AI로 무엇을 바꿀 수 있는가?" 사고 훈련</li>
+                    <li><strong>기초 과제 수행</strong> — 간단한 업무 자동화 기회 식별 및 기본 분석 실습</li>
+                </ul>
+
+                <h3>획득 가능 배지</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">첫 AX 과제 완료</span>
+                    <span class="modal-chip">첫 ROI 달성</span>
+                </div>
+            `,
+            en: `
+                <p><strong>AX Beginner</strong> is the first step in AI Transformation (AX). You understand basic AI concepts and develop an <strong>AX mindset</strong> to apply AI in your own work. Perform simple AX tasks using the platform's basic tools.</p>
+
+                <h3>Qualification Criteria</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Requirement</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Completed Tasks</strong></td><td>5 or more</td><td>Basic AX tasks completed</td></tr>
+                            <tr><td><strong>ROI-Achieved Tasks</strong></td><td>0 (none)</td><td>No ROI achievement required</td></tr>
+                            <tr><td><strong>Dept. Conversion Rate</strong></td><td>0% (none)</td><td>No conversion rate required</td></tr>
+                            <tr><td><strong>External Consulting</strong></td><td>Not required</td><td>No external experience needed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Learning Content</h3>
+                <ul>
+                    <li><strong>AI/AX Concepts</strong> — Basic concepts of AI, ML, GenAI and the meaning of AX (AI Transformation)</li>
+                    <li><strong>Platform Basics</strong> — 100K-AX Expert platform interface and basic features</li>
+                    <li><strong>AX Mindset Formation</strong> — Training to think "What can AI change in my work?"</li>
+                    <li><strong>Basic Task Execution</strong> — Identifying simple automation opportunities and basic analysis practice</li>
+                </ul>
+
+                <h3>Earnable Badges</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">First AX Task Complete</span>
+                    <span class="modal-chip">First ROI Achievement</span>
+                </div>
+            `
+        }
+    },
+
+    'cert-practitioner': {
+        icon: '🌿',
+        title: { ko: 'Level 2: 실무자 (AX Practitioner)', en: 'Level 2: AX Practitioner' },
+        body: {
+            ko: `
+                <p><strong>AX Practitioner</strong>는 <strong>독립적으로 AX 과제를 수행</strong>할 수 있는 단계입니다. 업무별 AI 적용 사례를 학습하고, 실제 업무에서 AI를 활용한 프로젝트를 주도적으로 수행합니다. ROI를 측정하고 성과를 입증하기 시작합니다.</p>
+
+                <h3>도달 기준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>평가 항목</th><th>기준</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>완료 과제 수</strong></td><td>20건 이상</td><td>다양한 AX 과제 수행 경험</td></tr>
+                            <tr><td><strong>ROI 달성 과제</strong></td><td>10건 이상</td><td>실질적 성과를 입증한 과제</td></tr>
+                            <tr><td><strong>부서 전환율</strong></td><td>0% (없음)</td><td>전환율 요구 없음</td></tr>
+                            <tr><td><strong>외부 컨설팅</strong></td><td>불필요</td><td>외부 경험 요구 없음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>역량 개발 영역</h3>
+                <ul>
+                    <li><strong>업무 AI 적용</strong> — 자신의 업무 프로세스에서 AI 적용 가능 영역 식별 및 실행</li>
+                    <li><strong>ROI 측정</strong> — AX 프로젝트의 투자 대비 효과를 수치로 산출하는 능력</li>
+                    <li><strong>프로젝트 수행</strong> — 간단한 AX 프로젝트를 계획부터 완료까지 독립 수행</li>
+                    <li><strong>도구 활용</strong> — 플랫폼의 분석 도구와 에이전트 프레임워크 기초 활용</li>
+                </ul>
+
+                <h3>역량 레이더 성장 영역</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">AX 기회 발굴</span>
+                    <span class="modal-chip">ROI 분석</span>
+                    <span class="modal-chip">보고서 작성</span>
+                    <span class="modal-chip">10건 과제 달성 배지</span>
+                </div>
+            `,
+            en: `
+                <p><strong>AX Practitioner</strong> can <strong>independently execute AX tasks</strong>. Learns AI application cases by business function and proactively conducts AI-powered projects in actual work. Begins measuring ROI and demonstrating results.</p>
+
+                <h3>Qualification Criteria</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Requirement</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Completed Tasks</strong></td><td>20 or more</td><td>Diverse AX task experience</td></tr>
+                            <tr><td><strong>ROI-Achieved Tasks</strong></td><td>10 or more</td><td>Tasks with proven tangible results</td></tr>
+                            <tr><td><strong>Dept. Conversion Rate</strong></td><td>0% (none)</td><td>No conversion rate required</td></tr>
+                            <tr><td><strong>External Consulting</strong></td><td>Not required</td><td>No external experience needed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Competency Development Areas</h3>
+                <ul>
+                    <li><strong>Work AI Application</strong> — Identifying and executing AI-applicable areas in your work processes</li>
+                    <li><strong>ROI Measurement</strong> — Quantifying return on investment for AX projects</li>
+                    <li><strong>Project Execution</strong> — Independently managing simple AX projects from planning to completion</li>
+                    <li><strong>Tool Proficiency</strong> — Basic use of platform analysis tools and agent frameworks</li>
+                </ul>
+
+                <h3>Skill Radar Growth Areas</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">AX Discovery</span>
+                    <span class="modal-chip">ROI Analysis</span>
+                    <span class="modal-chip">Report Writing</span>
+                    <span class="modal-chip">10 Tasks Badge</span>
+                </div>
+            `
+        }
+    },
+
+    'cert-specialist': {
+        icon: '🌳',
+        title: { ko: 'Level 3: 전문가 (AX Specialist)', en: 'Level 3: AX Specialist' },
+        body: {
+            ko: `
+                <p><strong>AX Specialist</strong>는 <strong>부서 내 AX 리더 역할</strong>을 수행하는 단계입니다. 도메인 특화 AX를 설계하고, 복합 프로젝트를 리드하며, 부서 전환율 30% 이상을 달성합니다. 리스크 분석과 변화 관리 역량도 갖춥니다.</p>
+
+                <h3>도달 기준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>평가 항목</th><th>기준</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>완료 과제 수</strong></td><td>50건 이상</td><td>충분한 실무 경험 축적</td></tr>
+                            <tr><td><strong>ROI 달성 과제</strong></td><td>25건 이상</td><td>절반 이상의 과제에서 ROI 달성</td></tr>
+                            <tr><td><strong>부서 전환율</strong></td><td>30% 이상</td><td>부서 업무의 30%를 AI로 전환</td></tr>
+                            <tr><td><strong>외부 컨설팅</strong></td><td>불필요</td><td>외부 경험 요구 없음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>전문 역량</h3>
+                <ul>
+                    <li><strong>도메인 특화 AX 설계</strong> — 제조/금융/의료 등 자신의 산업 도메인에 최적화된 AX 전략 수립</li>
+                    <li><strong>복합 프로젝트 리드</strong> — 다수의 이해관계자가 참여하는 프로젝트 주도</li>
+                    <li><strong>리스크 분석</strong> — 4대 리스크 카테고리(기술/조직/비즈니스/운영) 평가 능력</li>
+                    <li><strong>부서 변화 관리</strong> — 부서 단위 AI 전환 추진 및 저항 관리</li>
+                </ul>
+
+                <h3>6차원 역량 레이더</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>역량 차원</th><th>설명</th><th>목표 수준</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>AX 기회 발굴</strong></td><td>업무 프로세스 분석, AI 적용점 식별</td><td>60점 이상</td></tr>
+                            <tr><td><strong>ROI 분석</strong></td><td>비용 대비 효과 산출, NPV/IRR 계산</td><td>50점 이상</td></tr>
+                            <tr><td><strong>리스크 평가</strong></td><td>위험 요소 식별, 완화 전략 수립</td><td>50점 이상</td></tr>
+                            <tr><td><strong>실행 설계</strong></td><td>구현 아키텍처, 타임라인 설계</td><td>40점 이상</td></tr>
+                            <tr><td><strong>변화 관리</strong></td><td>조직 변화 추진, 교육 설계</td><td>40점 이상</td></tr>
+                            <tr><td><strong>보고서 작성</strong></td><td>전문 컨설팅 보고서 생성</td><td>50점 이상</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>획득 배지</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">50건 과제 달성</span>
+                    <span class="modal-chip">전환율 30% 달성</span>
+                </div>
+            `,
+            en: `
+                <p><strong>AX Specialist</strong> serves as the <strong>AX leader within a department</strong>. Designs domain-specific AX, leads complex projects, and achieves 30%+ department conversion rate. Also equipped with risk analysis and change management competencies.</p>
+
+                <h3>Qualification Criteria</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Requirement</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Completed Tasks</strong></td><td>50 or more</td><td>Substantial practical experience</td></tr>
+                            <tr><td><strong>ROI-Achieved Tasks</strong></td><td>25 or more</td><td>ROI achieved in 50%+ of tasks</td></tr>
+                            <tr><td><strong>Dept. Conversion Rate</strong></td><td>30% or higher</td><td>30% of dept. work converted to AI</td></tr>
+                            <tr><td><strong>External Consulting</strong></td><td>Not required</td><td>No external experience needed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Expert Competencies</h3>
+                <ul>
+                    <li><strong>Domain-Specific AX Design</strong> — Optimized AX strategies for your industry (manufacturing/finance/healthcare, etc.)</li>
+                    <li><strong>Complex Project Leadership</strong> — Leading projects with multiple stakeholders</li>
+                    <li><strong>Risk Analysis</strong> — Evaluating 4 risk categories (technical/organizational/business/operational)</li>
+                    <li><strong>Departmental Change Mgmt</strong> — Driving department-level AI transformation and managing resistance</li>
+                </ul>
+
+                <h3>6-Dimension Skill Radar</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Skill Dimension</th><th>Description</th><th>Target Level</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>AX Discovery</strong></td><td>Process analysis, AI opportunity identification</td><td>60+ points</td></tr>
+                            <tr><td><strong>ROI Analysis</strong></td><td>Cost-benefit calculation, NPV/IRR</td><td>50+ points</td></tr>
+                            <tr><td><strong>Risk Assessment</strong></td><td>Risk identification, mitigation strategy</td><td>50+ points</td></tr>
+                            <tr><td><strong>Implementation Design</strong></td><td>Architecture, timeline planning</td><td>40+ points</td></tr>
+                            <tr><td><strong>Change Management</strong></td><td>Organizational change, training design</td><td>40+ points</td></tr>
+                            <tr><td><strong>Report Writing</strong></td><td>Professional consulting report generation</td><td>50+ points</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Badges Earned</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">50 Tasks Achievement</span>
+                    <span class="modal-chip">30% Conversion Rate</span>
+                </div>
+            `
+        }
+    },
+
+    'cert-expert': {
+        icon: '🏔️',
+        title: { ko: 'Level 4: 숙련가 (AX Expert)', en: 'Level 4: AX Expert' },
+        body: {
+            ko: `
+                <p><strong>AX Expert</strong>는 <strong>기업 전사 AX 전략을 수립</strong>할 수 있는 단계입니다. 100건 이상의 과제를 수행하고, 50% 이상의 전환율을 달성한 검증된 전문가입니다. 멀티에이전트 시스템을 설계하고, 조직 전체의 변화를 관리합니다.</p>
+
+                <h3>도달 기준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>평가 항목</th><th>기준</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>완료 과제 수</strong></td><td>100건 이상</td><td>광범위한 AX 프로젝트 경험</td></tr>
+                            <tr><td><strong>ROI 달성 과제</strong></td><td>50건 이상</td><td>절반 이상의 과제에서 ROI 입증</td></tr>
+                            <tr><td><strong>부서 전환율</strong></td><td>50% 이상</td><td>부서 업무의 절반을 AI로 전환</td></tr>
+                            <tr><td><strong>외부 컨설팅</strong></td><td>불필요</td><td>외부 경험 요구 없음</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>핵심 역량</h3>
+                <ul>
+                    <li><strong>전사 AX 전략 수립</strong> — 기업 전체의 AI 전환 비전, 로드맵, 거버넌스 설계</li>
+                    <li><strong>멀티에이전트 시스템 설계</strong> — 7개 프레임워크를 활용한 복합 에이전트 아키텍처 구축</li>
+                    <li><strong>3 시나리오 ROI 분석</strong> — Conservative/Balanced/Aggressive 시나리오별 투자 분석</li>
+                    <li><strong>조직 변화 관리</strong> — 기업 전사 단위의 변화 저항 관리 및 교육 프로그램 설계</li>
+                    <li><strong>ISO 표준 기반 컨설팅</strong> — ISO 42001/23894/25059/38507 기반 전문 컨설팅</li>
+                </ul>
+
+                <h3>도달률 계산 방식</h3>
+                <p>다음 등급까지의 달성률은 <strong>3가지 지표의 가중 평균</strong>으로 산출됩니다:</p>
+                <div class="modal-chips">
+                    <span class="modal-chip">과제 달성률 = 완료 / 100</span>
+                    <span class="modal-chip">ROI 달성률 = ROI과제 / 50</span>
+                    <span class="modal-chip">전환율 달성률 = 전환율 / 50%</span>
+                    <span class="modal-chip">종합 = 평균 × 100%</span>
+                </div>
+
+                <h3>획득 배지</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">100건 과제 달성</span>
+                    <span class="modal-chip">ROI 50건 달성</span>
+                    <span class="modal-chip">AX Expert 달성</span>
+                </div>
+            `,
+            en: `
+                <p><strong>AX Expert</strong> can <strong>formulate enterprise-wide AX strategy</strong>. A proven expert with 100+ completed tasks and 50%+ conversion rate. Designs multi-agent systems and manages organization-wide transformation.</p>
+
+                <h3>Qualification Criteria</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Requirement</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Completed Tasks</strong></td><td>100 or more</td><td>Extensive AX project experience</td></tr>
+                            <tr><td><strong>ROI-Achieved Tasks</strong></td><td>50 or more</td><td>ROI proven in 50%+ of tasks</td></tr>
+                            <tr><td><strong>Dept. Conversion Rate</strong></td><td>50% or higher</td><td>Half of dept. work converted to AI</td></tr>
+                            <tr><td><strong>External Consulting</strong></td><td>Not required</td><td>No external experience needed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Core Competencies</h3>
+                <ul>
+                    <li><strong>Enterprise AX Strategy</strong> — Designing company-wide AI transformation vision, roadmap, governance</li>
+                    <li><strong>Multi-Agent System Design</strong> — Building complex agent architectures using 7 frameworks</li>
+                    <li><strong>3-Scenario ROI Analysis</strong> — Conservative/Balanced/Aggressive investment analysis</li>
+                    <li><strong>Organizational Change Mgmt</strong> — Enterprise-level resistance management and training program design</li>
+                    <li><strong>ISO Standards Consulting</strong> — Professional consulting based on ISO 42001/23894/25059/38507</li>
+                </ul>
+
+                <h3>Completion Rate Calculation</h3>
+                <p>Progress to the next level is calculated as the <strong>weighted average of 3 metrics</strong>:</p>
+                <div class="modal-chips">
+                    <span class="modal-chip">Task Rate = Completed / 100</span>
+                    <span class="modal-chip">ROI Rate = ROI Tasks / 50</span>
+                    <span class="modal-chip">Conversion Rate = Rate / 50%</span>
+                    <span class="modal-chip">Total = Average × 100%</span>
+                </div>
+
+                <h3>Badges Earned</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">100 Tasks Achievement</span>
+                    <span class="modal-chip">ROI 50 Tasks Achievement</span>
+                    <span class="modal-chip">AX Expert Badge</span>
+                </div>
+            `
+        }
+    },
+
+    'cert-master': {
+        icon: '👑',
+        title: { ko: 'Level 5: 마스터 (AX Master)', en: 'Level 5: AX Master' },
+        body: {
+            ko: `
+                <p><strong>AX Master</strong>는 인증 체계의 <strong>최고 단계</strong>로, 산업 도메인 AX 전문가입니다. Expert 수준의 모든 기준을 충족하면서, <strong>외부 컨설팅 경험</strong>까지 보유한 검증된 리더입니다. 산업 생태계 혁신, 국가 정책 자문, 후배 AX 전문가 양성을 담당합니다.</p>
+
+                <h3>도달 기준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>평가 항목</th><th>기준</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>완료 과제 수</strong></td><td>100건 이상</td><td>Expert 수준과 동일</td></tr>
+                            <tr><td><strong>ROI 달성 과제</strong></td><td>50건 이상</td><td>Expert 수준과 동일</td></tr>
+                            <tr><td><strong>부서 전환율</strong></td><td>50% 이상</td><td>Expert 수준과 동일</td></tr>
+                            <tr><td><strong>외부 컨설팅</strong></td><td>필수 ✓</td><td>타 기업/기관 AX 컨설팅 수행 경험</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Expert → Master 핵심 차이점</h3>
+                <p>Expert와 동일한 수치 기준에 <strong>외부 컨설팅 경험(external_consulting = true)</strong>이 추가됩니다. 이는 자신의 조직을 넘어 타 기업/기관에 AX 전략을 자문할 수 있는 역량을 검증합니다.</p>
+
+                <h3>마스터 전문 역할</h3>
+                <ul>
+                    <li><strong>산업 생태계 혁신</strong> — 산업 전체의 AI 전환 트렌드를 선도하고, 업종별 AX 표준을 제시</li>
+                    <li><strong>외부 AX 컨설팅</strong> — 타 기업/기관에 AX 전략 수립, 실행, 검증 자문 제공</li>
+                    <li><strong>국가 정책 자문</strong> — AI 전환 관련 정부 정책 수립에 자문 참여</li>
+                    <li><strong>AX 멘토링 및 강의</strong> — 후배 AX 전문가(Beginner~Expert) 양성 및 교육 프로그램 운영</li>
+                    <li><strong>기업 대시보드 총괄</strong> — 전사 인증 분포, 부서별 전환율, ROI 총계를 모니터링</li>
+                </ul>
+
+                <h3>전체 인증 등급 비교</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>등급</th><th>과제 수</th><th>ROI 과제</th><th>전환율</th><th>외부 컨설팅</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Beginner</strong></td><td>5건+</td><td>-</td><td>-</td><td>-</td></tr>
+                            <tr><td><strong>Practitioner</strong></td><td>20건+</td><td>10건+</td><td>-</td><td>-</td></tr>
+                            <tr><td><strong>Specialist</strong></td><td>50건+</td><td>25건+</td><td>30%+</td><td>-</td></tr>
+                            <tr><td><strong>Expert</strong></td><td>100건+</td><td>50건+</td><td>50%+</td><td>-</td></tr>
+                            <tr><td><strong>Master</strong></td><td>100건+</td><td>50건+</td><td>50%+</td><td>필수 ✓</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>최종 획득 배지</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">AX Master 달성</span>
+                    <span class="modal-chip">Grand Master</span>
+                    <span class="modal-chip">산업 도메인 AX 전문가</span>
+                </div>
+            `,
+            en: `
+                <p><strong>AX Master</strong> is the <strong>highest level</strong> of the certification system — an industry domain AX expert. Meets all Expert-level criteria plus <strong>external consulting experience</strong>. Responsible for industry ecosystem innovation, national policy advisory, and mentoring junior AX professionals.</p>
+
+                <h3>Qualification Criteria</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Requirement</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Completed Tasks</strong></td><td>100 or more</td><td>Same as Expert level</td></tr>
+                            <tr><td><strong>ROI-Achieved Tasks</strong></td><td>50 or more</td><td>Same as Expert level</td></tr>
+                            <tr><td><strong>Dept. Conversion Rate</strong></td><td>50% or higher</td><td>Same as Expert level</td></tr>
+                            <tr><td><strong>External Consulting</strong></td><td>Required ✓</td><td>AX consulting experience at other organizations</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Expert → Master Key Difference</h3>
+                <p>Same numeric criteria as Expert, plus <strong>external consulting experience (external_consulting = true)</strong>. This verifies the ability to advise AX strategy beyond your own organization.</p>
+
+                <h3>Master Professional Roles</h3>
+                <ul>
+                    <li><strong>Industry Ecosystem Innovation</strong> — Leading AI transformation trends across the industry, setting AX standards</li>
+                    <li><strong>External AX Consulting</strong> — Advising other organizations on AX strategy, execution, and validation</li>
+                    <li><strong>National Policy Advisory</strong> — Participating in government AI policy formulation</li>
+                    <li><strong>AX Mentoring & Teaching</strong> — Training junior AX professionals (Beginner~Expert) and running education programs</li>
+                    <li><strong>Enterprise Dashboard Oversight</strong> — Monitoring company-wide certification distribution, conversion rates, and ROI</li>
+                </ul>
+
+                <h3>Full Certification Level Comparison</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Level</th><th>Tasks</th><th>ROI Tasks</th><th>Conv. Rate</th><th>External</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Beginner</strong></td><td>5+</td><td>-</td><td>-</td><td>-</td></tr>
+                            <tr><td><strong>Practitioner</strong></td><td>20+</td><td>10+</td><td>-</td><td>-</td></tr>
+                            <tr><td><strong>Specialist</strong></td><td>50+</td><td>25+</td><td>30%+</td><td>-</td></tr>
+                            <tr><td><strong>Expert</strong></td><td>100+</td><td>50+</td><td>50%+</td><td>-</td></tr>
+                            <tr><td><strong>Master</strong></td><td>100+</td><td>50+</td><td>50%+</td><td>Required ✓</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Final Badges</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">AX Master Achievement</span>
+                    <span class="modal-chip">Grand Master</span>
+                    <span class="modal-chip">Industry Domain AX Expert</span>
+                </div>
+            `
+        }
+    },
+
     'tech-langgraph': {
         icon: '🔄',
         title: { ko: 'LangGraph — 상태 기반 워크플로우 엔진', en: 'LangGraph — State-based Workflow Engine' },
