@@ -257,7 +257,7 @@
 
             <div class="features-detailed-grid">
                 <!-- Feature 1 -->
-                <div class="feature-detail-card glass-card">
+                <div class="feature-detail-card glass-card" data-feature="multi-agent">
                     <div class="feature-number">01</div>
                     <div class="feature-icon-large">🤖</div>
                     <h3 class="feature-detail-title" data-ko="7개 멀티에이전트 통합" data-en="7 Multi-Agent Integration">7개 멀티에이전트 통합</h3>
@@ -273,7 +273,7 @@
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="feature-detail-card glass-card">
+                <div class="feature-detail-card glass-card" data-feature="ax-discovery">
                     <div class="feature-number">02</div>
                     <div class="feature-icon-large">🔍</div>
                     <h3 class="feature-detail-title" data-ko="AX 디스커버리" data-en="AX Discovery">AX 디스커버리</h3>
@@ -288,7 +288,7 @@
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="feature-detail-card glass-card">
+                <div class="feature-detail-card glass-card" data-feature="iso-standards">
                     <div class="feature-number">03</div>
                     <div class="feature-icon-large">📋</div>
                     <h3 class="feature-detail-title" data-ko="ISO 국제표준 내장" data-en="Built-in ISO Standards">ISO 국제표준 내장</h3>
@@ -304,7 +304,7 @@
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-detail-card glass-card">
+                <div class="feature-detail-card glass-card" data-feature="analytics">
                     <div class="feature-number">04</div>
                     <div class="feature-icon-large">📊</div>
                     <h3 class="feature-detail-title" data-ko="고급 분석 & 보고서" data-en="Advanced Analytics & Reports">고급 분석 & 보고서</h3>
@@ -319,7 +319,7 @@
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="feature-detail-card glass-card">
+                <div class="feature-detail-card glass-card" data-feature="domains">
                     <div class="feature-number">05</div>
                     <div class="feature-icon-large">🏭</div>
                     <h3 class="feature-detail-title" data-ko="7개 산업 도메인" data-en="7 Industry Domains">7개 산업 도메인</h3>
@@ -335,7 +335,7 @@
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="feature-detail-card glass-card">
+                <div class="feature-detail-card glass-card" data-feature="local-ai">
                     <div class="feature-number">06</div>
                     <div class="feature-icon-large">🦙</div>
                     <h3 class="feature-detail-title" data-ko="로컬 AI & 하이브리드" data-en="Local AI & Hybrid">로컬 AI & 하이브리드</h3>
@@ -597,7 +597,20 @@
         </div>
     </footer>
 
+    <!-- Feature Detail Modal -->
+    <div id="featureModal" class="modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="featureModalClose">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon" id="featureModalIcon"></div>
+                <h2 class="modal-title" id="featureModalTitle"></h2>
+            </div>
+            <div class="modal-body" id="featureModalBody"></div>
+        </div>
+    </div>
+
     <script src="animation3d.js"></script>
+    <script src="feature-details.js"></script>
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>

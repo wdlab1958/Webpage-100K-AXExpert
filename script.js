@@ -193,6 +193,62 @@ window.addEventListener('load', () => {
 });
 
 // ========================================
+// Feature Detail Modal
+// ========================================
+(function initFeatureModal() {
+    const modal = document.getElementById('featureModal');
+    const modalClose = document.getElementById('featureModalClose');
+    const modalIcon = document.getElementById('featureModalIcon');
+    const modalTitle = document.getElementById('featureModalTitle');
+    const modalBody = document.getElementById('featureModalBody');
+
+    if (!modal) return;
+
+    function getLang() {
+        return (window.i18n && window.i18n.currentLang) || localStorage.getItem('ax-lang') || 'ko';
+    }
+
+    // Open modal when a feature card is clicked
+    document.querySelectorAll('.feature-detail-card[data-feature]').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't open if clicking a tag
+            if (e.target.classList.contains('tag')) return;
+
+            const featureId = card.getAttribute('data-feature');
+            const data = typeof featureDetails !== 'undefined' && featureDetails[featureId];
+            if (!data) return;
+
+            const lang = getLang();
+
+            modalIcon.textContent = data.icon;
+            modalTitle.textContent = data.title[lang] || data.title.ko;
+            modalBody.innerHTML = data.body[lang] || data.body.ko;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+})();
+
+// ========================================
 // Console Welcome Message
 // ========================================
 console.log('%c🎯 100K-AX Expert Platform', 'font-size: 20px; font-weight: bold; color: #4f91ff;');

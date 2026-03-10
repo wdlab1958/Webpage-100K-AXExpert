@@ -22,9 +22,8 @@
 }
 
 .modal-content {
-    max-width: 700px;
-    width: 90%;
-    max-height: 80vh;
+    max-width: 850px;
+    width: 92%;
     overflow-y: auto;
     position: relative;
     animation: fadeInUp 0.4s ease;
@@ -123,4 +122,146 @@
 
 .tag:active {
     transform: translateY(0) scale(0.95);
+}
+
+/* Feature card clickable hint */
+.feature-detail-card[data-feature] {
+    cursor: pointer;
+}
+
+.feature-detail-card[data-feature]::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    background: rgba(79, 145, 255, 0.12);
+    border: 1px solid rgba(79, 145, 255, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234f91ff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature-detail-card[data-feature]:hover::after {
+    background-color: rgba(79, 145, 255, 0.25);
+    border-color: rgba(79, 145, 255, 0.5);
+    transform: translateX(2px);
+}
+
+/* ========================================
+   Modal Table Styles
+   ======================================== */
+.modal-table-wrap {
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.modal-table thead th {
+    background: rgba(79, 145, 255, 0.12);
+    color: var(--color-quantum-blue);
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 2px solid rgba(79, 145, 255, 0.2);
+}
+
+.modal-table tbody td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--color-slate-400);
+    vertical-align: top;
+}
+
+.modal-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.modal-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.modal-table tbody td strong {
+    color: white;
+}
+
+/* ========================================
+   Modal Chip / Tag Styles
+   ======================================== */
+.modal-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.modal-chip {
+    padding: 0.45rem 1rem;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a78bfa;
+    transition: all 0.3s ease;
+}
+
+.modal-chip:hover {
+    background: rgba(139, 92, 246, 0.22);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* ========================================
+   Modal Responsive
+   ======================================== */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 2rem 1.5rem;
+        max-height: 90vh;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-table {
+        font-size: 0.8rem;
+    }
+
+    .modal-table thead th,
+    .modal-table tbody td {
+        padding: 0.5rem 0.65rem;
+    }
+}
+
+/* Scrollbar inside modal */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(79, 145, 255, 0.3);
+    border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(79, 145, 255, 0.5);
 }
