@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="100K-AX Expert Platform - 산업 도메인 업무 전문가 10만 명을 AX 전문가로 양성하는 통합 플랫폼">
+    <title>100K-AX Expert Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">100K-AX Expert</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-ko="홈" data-en="Home">홈</a></li>
+                <li><a href="#overview" class="nav-link" data-ko="개요" data-en="Overview">개요</a></li>
+                <li><a href="#stages" class="nav-link" data-ko="5단계 프레임워크" data-en="5-Stage Framework">5단계 프레임워크</a></li>
+                <li><a href="#features" class="nav-link" data-ko="핵심 기능" data-en="Key Features">핵심 기능</a></li>
+                <li><a href="#architecture" class="nav-link" data-ko="아키텍처" data-en="Architecture">아키텍처</a></li>
+                <li><a href="#certification" class="nav-link" data-ko="인증 체계" data-en="Certification">인증 체계</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-lang" id="langToggle" title="한국어/English">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-text" id="langText">EN</span>
+                </button>
+                <a href="#contact" class="btn-primary" data-ko="문의하기" data-en="Contact Us">문의하기</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span class="badge-text" data-ko="7개 멀티에이전트 프레임워크 + ISO 표준 통합" data-en="7 Multi-Agent Frameworks + ISO Standards Integration">7개 멀티에이전트 프레임워크 + ISO 표준 통합</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line" data-ko="100K-AX Expert" data-en="100K-AX Expert">100K-AX Expert</span>
+                <span class="title-line gradient-text" data-ko="AI 전환 전문가 양성 플랫폼" data-en="AI Transformation Expert Platform">AI 전환 전문가 양성 플랫폼</span>
+            </h1>
+            <p class="hero-subtitle" data-ko="각 산업 도메인의 업무 전문가 10만 명을 AX(AI Transformation) 전문가로 양성하는 통합 플랫폼입니다. AI를 직접 개발하는 것이 아니라, 자기 업무에 AI를 접목하여 비용을 절감하고 품질을 높이는 실무 전문가를 만듭니다." data-en="An integrated platform to train 100,000 industry domain experts as AX (AI Transformation) specialists. Not AI engineers, but practical experts who apply AI to their own work to reduce costs and improve quality.">
+                각 산업 도메인의 업무 전문가 10만 명을 AX(AI Transformation) 전문가로 양성하는 통합 플랫폼입니다.<br>
+                AI를 직접 개발하는 것이 아니라, 자기 업무에 AI를 접목하여 비용을 절감하고 품질을 높이는 실무 전문가를 만듭니다.
+            </p>
+            <div class="hero-cta">
+                <a href="#overview" class="btn-glow">
+                    <span data-ko="플랫폼 소개" data-en="Explore Platform">플랫폼 소개</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <a href="#certification" class="btn-outline">
+                    <span data-ko="인증 체계 보기" data-en="View Certification">인증 체계 보기</span>
+                </a>
+            </div>
+            <div class="hero-trust-badges">
+                <div class="trust-badge">
+                    <span class="trust-icon">✓</span>
+                    <span data-ko="10만 전문가 양성 목표" data-en="100K Expert Training Goal">10만 전문가 양성 목표</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">✓</span>
+                    <span data-ko="7개 AI 프레임워크" data-en="7 AI Frameworks">7개 AI 프레임워크</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">✓</span>
+                    <span data-ko="5단계 인증 체계" data-en="5-Level Certification">5단계 인증 체계</span>
+                </div>
+                <div class="trust-badge">
+                    <span class="trust-icon">✓</span>
+                    <span data-ko="로컬 AI 보안" data-en="Local AI Security">로컬 AI 보안</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-ko="플랫폼 개요" data-en="Platform Overview">플랫폼 개요</h2>
+                <p class="section-subtitle" data-ko="AI 기술을 업무에 접목하는 실무 전문가 양성" data-en="Training practical experts who apply AI to their work">AI 기술을 업무에 접목하는 실무 전문가 양성</p>
+            </div>
+
+            <div class="overview-grid">
+                <!-- What is AX Expert -->
+                <div class="overview-card glass-card">
+                    <div class="overview-icon">🧑‍💼</div>
+                    <h3 class="overview-title" data-ko="AX 전문가란?" data-en="What is an AX Expert?">AX 전문가란?</h3>
+                    <p class="overview-description" data-ko="AI 기술을 직접 개발하는 엔지니어가 아니라, 자기 업무에 AI를 접목하여 비용을 절감하고 품질을 높이는 실무 전문가입니다. 제조, 금융, 공공, 물류, 의료, 교육, 국방 등 7개 산업 도메인에서 활동합니다." data-en="Not an AI engineer, but a practical expert who applies AI to their own work to reduce costs and improve quality. Active across 7 industry domains: Manufacturing, Finance, Public, Logistics, Healthcare, Education, and Defense.">
+                        AI 기술을 직접 개발하는 엔지니어가 아니라, 자기 업무에 AI를 접목하여 비용을 절감하고 품질을 높이는 실무 전문가입니다. 제조, 금융, 공공, 물류, 의료, 교육, 국방 등 7개 산업 도메인에서 활동합니다.
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div class="overview-card glass-card">
+                    <div class="overview-icon">🎯</div>
+                    <h3 class="overview-title" data-ko="미션" data-en="Mission">미션</h3>
+                    <p class="overview-description" data-ko="5년간 10,000개 기업 × 기업당 10명 = 10만 AX 전문가 양성. 대한민국 AI 3대 강국 실현과 'AI는 한국어로' 정책을 지원하는 국가 AI 인력 양성 프로젝트입니다." data-en="Train 100K AX experts over 5 years (10,000 companies × 10 people). A national AI workforce project supporting Korea's 'Top 3 AI Nation' goal and 'AI in Korean' policy.">
+                        5년간 10,000개 기업 × 기업당 10명 = 10만 AX 전문가 양성. 대한민국 AI 3대 강국 실현과 'AI는 한국어로' 정책을 지원하는 국가 AI 인력 양성 프로젝트입니다.
+                    </p>
+                </div>
+
+                <!-- Platform Capabilities -->
+                <div class="overview-card glass-card">
+                    <div class="overview-icon">⚙️</div>
+                    <h3 class="overview-title" data-ko="플랫폼 역량" data-en="Platform Capabilities">플랫폼 역량</h3>
+                    <p class="overview-description" data-ko="7개 멀티에이전트 프레임워크 통합 오케스트레이션, 5단계 컨설팅 프레임워크, ISO 국제표준 내장, AX 디스커버리(업무→AI 기회 발굴), ROI/위험 분석, 자동 보고서 생성 등을 제공합니다." data-en="Integrated orchestration of 7 multi-agent frameworks, 5-stage consulting framework, built-in ISO standards, AX Discovery (work→AI opportunity), ROI/risk analysis, and automated report generation.">
+                        7개 멀티에이전트 프레임워크 통합 오케스트레이션, 5단계 컨설팅 프레임워크, ISO 국제표준 내장, AX 디스커버리(업무→AI 기회 발굴), ROI/위험 분석, 자동 보고서 생성 등을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Security -->
+                <div class="overview-card glass-card">
+                    <div class="overview-icon">🔒</div>
+                    <h3 class="overview-title" data-ko="보안 및 프라이버시" data-en="Security & Privacy">보안 및 프라이버시</h3>
+                    <p class="overview-description" data-ko="Ollama 기반 로컬 LLM으로 완전한 오프라인 운영이 가능합니다. AES-256-GCM 암호화, JWT/OAuth 2.0 인증, RBAC 권한 관리, 종합 감사 로깅으로 기업 및 공공기관의 민감 데이터를 보호합니다." data-en="Complete offline operation with Ollama-based local LLM. AES-256-GCM encryption, JWT/OAuth 2.0 authentication, RBAC authorization, and comprehensive audit logging protect sensitive enterprise and government data.">
+                        Ollama 기반 로컬 LLM으로 완전한 오프라인 운영이 가능합니다. AES-256-GCM 암호화, JWT/OAuth 2.0 인증, RBAC 권한 관리, 종합 감사 로깅으로 기업 및 공공기관의 민감 데이터를 보호합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Stage Framework Section -->
+    <section id="stages" class="detection-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-ko="5단계 AX 컨설팅 프레임워크" data-en="5-Stage AX Consulting Framework">5단계 AX 컨설팅 프레임워크</h2>
+                <p class="section-subtitle" data-ko="전략 수립부터 지속적 운영까지, AI 전환의 전 과정을 체계적으로 지원합니다" data-en="Systematic support for the entire AI transformation journey, from strategy to continuous operations">전략 수립부터 지속적 운영까지, AI 전환의 전 과정을 체계적으로 지원합니다</p>
+            </div>
+
+            <div class="stages-timeline">
+                <!-- Stage 1 -->
+                <div class="stage-item">
+                    <div class="stage-number-circle">1</div>
+                    <div class="stage-card glass-card">
+                        <div class="stage-badge" data-ko="전략" data-en="Strategy">전략</div>
+                        <h3 class="stage-title" data-ko="AI 비전 & 전략" data-en="AI Vision & Strategy">AI 비전 & 전략</h3>
+                        <p class="stage-description" data-ko="AI 성숙도 진단, 비전 수립, 전략 로드맵 설계. CMMI 5단계 모델 기반으로 현재 수준을 평가하고 목표를 설정합니다." data-en="AI maturity diagnosis, vision establishment, strategy roadmap design. Evaluate current level and set targets based on CMMI 5-level model.">
+                            AI 성숙도 진단, 비전 수립, 전략 로드맵 설계. CMMI 5단계 모델 기반으로 현재 수준을 평가하고 목표를 설정합니다.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag" data-ko="성숙도 진단" data-en="Maturity Assessment">성숙도 진단</span>
+                            <span class="tag" data-ko="비전 수립" data-en="Vision Planning">비전 수립</span>
+                            <span class="tag" data-ko="로드맵" data-en="Roadmap">로드맵</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="stage-item">
+                    <div class="stage-number-circle">2</div>
+                    <div class="stage-card glass-card">
+                        <div class="stage-badge" data-ko="설계" data-en="Design">설계</div>
+                        <h3 class="stage-title" data-ko="유스케이스 & 설계" data-en="Use Case & Design">유스케이스 & 설계</h3>
+                        <p class="stage-description" data-ko="AX 디스커버리로 업무 프로세스에서 AI 적용 기회를 발굴하고, 상세 유스케이스를 정의합니다. 4D 분석(Discover, Define, Design, Deliver)으로 체계적으로 접근합니다." data-en="Discover AI opportunities in business processes with AX Discovery, define detailed use cases. Systematic approach through 4D analysis (Discover, Define, Design, Deliver).">
+                            AX 디스커버리로 업무 프로세스에서 AI 적용 기회를 발굴하고, 상세 유스케이스를 정의합니다. 4D 분석(Discover, Define, Design, Deliver)으로 체계적으로 접근합니다.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag" data-ko="AX 디스커버리" data-en="AX Discovery">AX 디스커버리</span>
+                            <span class="tag" data-ko="4D 분석" data-en="4D Analysis">4D 분석</span>
+                            <span class="tag" data-ko="유스케이스" data-en="Use Cases">유스케이스</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="stage-item">
+                    <div class="stage-number-circle">3</div>
+                    <div class="stage-card glass-card">
+                        <div class="stage-badge" data-ko="구축" data-en="Build">구축</div>
+                        <h3 class="stage-title" data-ko="플랫폼 & 솔루션 구축" data-en="Platform & Solution Build">플랫폼 & 솔루션 구축</h3>
+                        <p class="stage-description" data-ko="AI 플랫폼 선정 및 구축, 솔루션 개발, 데이터 파이프라인 구성. 7개 에이전트 프레임워크를 최적으로 조합하여 솔루션을 구현합니다." data-en="AI platform selection and build, solution development, data pipeline configuration. Implement solutions by optimally combining 7 agent frameworks.">
+                            AI 플랫폼 선정 및 구축, 솔루션 개발, 데이터 파이프라인 구성. 7개 에이전트 프레임워크를 최적으로 조합하여 솔루션을 구현합니다.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag" data-ko="플랫폼 구축" data-en="Platform Build">플랫폼 구축</span>
+                            <span class="tag" data-ko="솔루션 개발" data-en="Solution Dev">솔루션 개발</span>
+                            <span class="tag" data-ko="데이터 파이프라인" data-en="Data Pipeline">데이터 파이프라인</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="stage-item">
+                    <div class="stage-number-circle">4</div>
+                    <div class="stage-card glass-card">
+                        <div class="stage-badge" data-ko="검증" data-en="Validate">검증</div>
+                        <h3 class="stage-title" data-ko="파일럿 & 확산" data-en="Pilot & Scale">파일럿 & 확산</h3>
+                        <p class="stage-description" data-ko="파일럿 프로젝트 실행, ROI 검증(NPV, IRR, 회수기간), 위험 분석(FMEA, 몬테카를로), 성공 사례 기반 전사 확산 전략을 수립합니다." data-en="Execute pilot projects, verify ROI (NPV, IRR, Payback Period), risk analysis (FMEA, Monte Carlo), and establish enterprise-wide expansion strategies based on success cases.">
+                            파일럿 프로젝트 실행, ROI 검증(NPV, IRR, 회수기간), 위험 분석(FMEA, 몬테카를로), 성공 사례 기반 전사 확산 전략을 수립합니다.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag" data-ko="파일럿" data-en="Pilot">파일럿</span>
+                            <span class="tag" data-ko="ROI 분석" data-en="ROI Analysis">ROI 분석</span>
+                            <span class="tag" data-ko="위험 관리" data-en="Risk Management">위험 관리</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 5 -->
+                <div class="stage-item">
+                    <div class="stage-number-circle">5</div>
+                    <div class="stage-card glass-card">
+                        <div class="stage-badge" data-ko="운영" data-en="Operate">운영</div>
+                        <h3 class="stage-title" data-ko="운영 & 지속적 개선" data-en="Operations & Continuous Improvement">운영 & 지속적 개선</h3>
+                        <p class="stage-description" data-ko="AI 거버넌스 체계 운영, 성과 모니터링, 지속적 최적화. ISO 38500 기반 IT 거버넌스와 ISO 42001 AI 관리 시스템을 적용합니다." data-en="AI governance operation, performance monitoring, continuous optimization. Apply ISO 38500-based IT governance and ISO 42001 AI management system.">
+                            AI 거버넌스 체계 운영, 성과 모니터링, 지속적 최적화. ISO 38500 기반 IT 거버넌스와 ISO 42001 AI 관리 시스템을 적용합니다.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag" data-ko="AI 거버넌스" data-en="AI Governance">AI 거버넌스</span>
+                            <span class="tag" data-ko="성과 모니터링" data-en="Monitoring">성과 모니터링</span>
+                            <span class="tag">ISO 38500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-ko="핵심 기능" data-en="Key Features">핵심 기능</h2>
+                <p class="section-subtitle" data-ko="100K-AX Expert 플랫폼의 차별화된 기능" data-en="Differentiated features of the 100K-AX Expert Platform">100K-AX Expert 플랫폼의 차별화된 기능</p>
+            </div>
+
+            <div class="features-detailed-grid">
+                <!-- Feature 1 -->
+                <div class="feature-detail-card glass-card">
+                    <div class="feature-number">01</div>
+                    <div class="feature-icon-large">🤖</div>
+                    <h3 class="feature-detail-title" data-ko="7개 멀티에이전트 통합" data-en="7 Multi-Agent Integration">7개 멀티에이전트 통합</h3>
+                    <p class="feature-detail-description" data-ko="Native Orchestrator, LangGraph, CrewAI, AutoGen AG2, DSPy, LangChain, LlamaIndex 등 7개 에이전트 프레임워크를 최적으로 통합합니다. 업무 특성에 따라 최적 프레임워크를 자동 선택하고 협업시킵니다." data-en="Optimally integrates 7 agent frameworks: Native Orchestrator, LangGraph, CrewAI, AutoGen AG2, DSPy, LangChain, and LlamaIndex. Automatically selects and orchestrates the best framework based on task characteristics.">
+                        Native Orchestrator, LangGraph, CrewAI, AutoGen AG2, DSPy, LangChain, LlamaIndex 등 7개 에이전트 프레임워크를 최적으로 통합합니다. 업무 특성에 따라 최적 프레임워크를 자동 선택하고 협업시킵니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">CrewAI</span>
+                        <span class="tag">AutoGen</span>
+                        <span class="tag">DSPy</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-detail-card glass-card">
+                    <div class="feature-number">02</div>
+                    <div class="feature-icon-large">🔍</div>
+                    <h3 class="feature-detail-title" data-ko="AX 디스커버리" data-en="AX Discovery">AX 디스커버리</h3>
+                    <p class="feature-detail-description" data-ko="업무 프로세스를 분석하여 AI 적용 기회를 자동으로 발굴합니다. 4D 분석(Discover, Define, Design, Deliver) 방법론으로 10개 부서별 맞춤 AX 유스케이스 템플릿을 제공합니다." data-en="Automatically discovers AI application opportunities by analyzing business processes. Provides 10 department-specific AX use case templates through 4D analysis methodology (Discover, Define, Design, Deliver).">
+                        업무 프로세스를 분석하여 AI 적용 기회를 자동으로 발굴합니다. 4D 분석(Discover, Define, Design, Deliver) 방법론으로 10개 부서별 맞춤 AX 유스케이스 템플릿을 제공합니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag" data-ko="4D 분석" data-en="4D Analysis">4D 분석</span>
+                        <span class="tag" data-ko="10개 부서 템플릿" data-en="10 Dept Templates">10개 부서 템플릿</span>
+                        <span class="tag" data-ko="AI 기회 발굴" data-en="AI Opportunity">AI 기회 발굴</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-detail-card glass-card">
+                    <div class="feature-number">03</div>
+                    <div class="feature-icon-large">📋</div>
+                    <h3 class="feature-detail-title" data-ko="ISO 국제표준 내장" data-en="Built-in ISO Standards">ISO 국제표준 내장</h3>
+                    <p class="feature-detail-description" data-ko="ISO/IEC 42001(AI 관리 시스템), ISO/IEC 23053(ML 프레임워크), ISO/IEC 24030(AI 역량 평가), ISO/IEC 38500(IT 거버넌스) 등 4개 국제표준을 내장하여 글로벌 수준의 AI 거버넌스를 보장합니다." data-en="Built-in 4 international standards: ISO/IEC 42001 (AI Management), ISO/IEC 23053 (ML Framework), ISO/IEC 24030 (AI Assessment), ISO/IEC 38500 (IT Governance), ensuring global-level AI governance.">
+                        ISO/IEC 42001(AI 관리 시스템), ISO/IEC 23053(ML 프레임워크), ISO/IEC 24030(AI 역량 평가), ISO/IEC 38500(IT 거버넌스) 등 4개 국제표준을 내장하여 글로벌 수준의 AI 거버넌스를 보장합니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">ISO 42001</span>
+                        <span class="tag">ISO 23053</span>
+                        <span class="tag">ISO 24030</span>
+                        <span class="tag">ISO 38500</span>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-detail-card glass-card">
+                    <div class="feature-number">04</div>
+                    <div class="feature-icon-large">📊</div>
+                    <h3 class="feature-detail-title" data-ko="고급 분석 & 보고서" data-en="Advanced Analytics & Reports">고급 분석 & 보고서</h3>
+                    <p class="feature-detail-description" data-ko="AI 성숙도 평가(CMMI 5단계), ROI 분석(NPV, IRR, 회수기간, 민감도), 위험 분석(FMEA, 몬테카를로), 시나리오 분석 등 종합적인 분석 도구와 DOCX/PDF/PPTX 자동 보고서 생성을 제공합니다." data-en="Comprehensive analytics including AI Maturity Assessment (5-level CMMI), ROI Analysis (NPV, IRR, Payback, Sensitivity), Risk Analysis (FMEA, Monte Carlo), Scenario Analysis, and automated DOCX/PDF/PPTX report generation.">
+                        AI 성숙도 평가(CMMI 5단계), ROI 분석(NPV, IRR, 회수기간, 민감도), 위험 분석(FMEA, 몬테카를로), 시나리오 분석 등 종합적인 분석 도구와 DOCX/PDF/PPTX 자동 보고서 생성을 제공합니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag" data-ko="ROI 분석" data-en="ROI Analysis">ROI 분석</span>
+                        <span class="tag">FMEA</span>
+                        <span class="tag" data-ko="자동 보고서" data-en="Auto Reports">자동 보고서</span>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-detail-card glass-card">
+                    <div class="feature-number">05</div>
+                    <div class="feature-icon-large">🏭</div>
+                    <h3 class="feature-detail-title" data-ko="7개 산업 도메인" data-en="7 Industry Domains">7개 산업 도메인</h3>
+                    <p class="feature-detail-description" data-ko="제조, 금융, 공공, 물류, 의료, 교육, 국방 등 7개 주요 산업 도메인에 특화된 AX 템플릿과 베스트 프랙티스를 제공합니다. 각 도메인의 실제 업무 환경에 최적화된 AI 적용 사례를 제시합니다." data-en="Specialized AX templates and best practices for 7 key industries: Manufacturing, Finance, Public Sector, Logistics, Healthcare, Education, and Defense. Presents AI application cases optimized for real-world workflows.">
+                        제조, 금융, 공공, 물류, 의료, 교육, 국방 등 7개 주요 산업 도메인에 특화된 AX 템플릿과 베스트 프랙티스를 제공합니다. 각 도메인의 실제 업무 환경에 최적화된 AI 적용 사례를 제시합니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag" data-ko="제조" data-en="Manufacturing">제조</span>
+                        <span class="tag" data-ko="금융" data-en="Finance">금융</span>
+                        <span class="tag" data-ko="공공" data-en="Public">공공</span>
+                        <span class="tag" data-ko="의료" data-en="Healthcare">의료</span>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-detail-card glass-card">
+                    <div class="feature-number">06</div>
+                    <div class="feature-icon-large">🦙</div>
+                    <h3 class="feature-detail-title" data-ko="로컬 AI & 하이브리드" data-en="Local AI & Hybrid">로컬 AI & 하이브리드</h3>
+                    <p class="feature-detail-description" data-ko="Ollama 기반 로컬 LLM(llama3.2)으로 완전한 오프라인 운영이 가능합니다. 데이터 민감도에 따라 로컬/클라우드 LLM을 자동 라우팅하는 하이브리드 아키텍처를 제공하며, RTX 5090 기반 AI 어플라이언스로 배포됩니다." data-en="Complete offline operation with Ollama-based local LLM (llama3.2). Hybrid architecture automatically routes between local/cloud LLM based on data sensitivity. Deployed as RTX 5090-based AI appliances.">
+                        Ollama 기반 로컬 LLM(llama3.2)으로 완전한 오프라인 운영이 가능합니다. 데이터 민감도에 따라 로컬/클라우드 LLM을 자동 라우팅하는 하이브리드 아키텍처를 제공하며, RTX 5090 기반 AI 어플라이언스로 배포됩니다.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="tag">Ollama</span>
+                        <span class="tag" data-ko="하이브리드 LLM" data-en="Hybrid LLM">하이브리드 LLM</span>
+                        <span class="tag">RTX 5090</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-ko="기술 아키텍처" data-en="Technical Architecture">기술 아키텍처</h2>
+                <p class="section-subtitle" data-ko="7개 에이전트 프레임워크의 통합 오케스트레이션" data-en="Integrated orchestration of 7 agent frameworks">7개 에이전트 프레임워크의 통합 오케스트레이션</p>
+            </div>
+
+            <!-- Multi-Agent Workflow -->
+            <div class="workflow-diagram">
+                <div class="workflow-step">
+                    <div class="step-card glass-card">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title" data-ko="업무 분석" data-en="Task Analysis">업무 분석</h4>
+                        <p class="step-description" data-ko="업무 프로세스 입력 및 AI 적용 요구사항 분석" data-en="Input business processes and analyze AI requirements">업무 프로세스 입력 및 AI 적용 요구사항 분석</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-card glass-card">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title" data-ko="에이전트 선택" data-en="Agent Selection">에이전트 선택</h4>
+                        <p class="step-description" data-ko="7개 프레임워크 중 최적 조합 자동 선택" data-en="Auto-select optimal combination from 7 frameworks">7개 프레임워크 중 최적 조합 자동 선택</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-card glass-card">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title" data-ko="협업 분석" data-en="Collaborative Analysis">협업 분석</h4>
+                        <p class="step-description" data-ko="전략, 유스케이스, ROI, 위험 에이전트 동시 실행" data-en="Run strategy, use case, ROI, risk agents simultaneously">전략, 유스케이스, ROI, 위험 에이전트 동시 실행</p>
+                    </div>
+                    <div class="step-arrow">→</div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-card glass-card">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title" data-ko="결과 종합" data-en="Result Synthesis">결과 종합</h4>
+                        <p class="step-description" data-ko="ISO 표준 기반 품질 검증 및 보고서 자동 생성" data-en="ISO-based quality validation and automated report generation">ISO 표준 기반 품질 검증 및 보고서 자동 생성</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack">
+                <h3 class="tech-title" data-ko="기술 스택" data-en="Tech Stack">기술 스택</h3>
+                <div class="tech-grid">
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">🔄</span>
+                        <span class="tech-name">LangGraph</span>
+                        <span class="tech-desc" data-ko="StateGraph 워크플로우" data-en="StateGraph Workflow">StateGraph 워크플로우</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">🤖</span>
+                        <span class="tech-name">CrewAI</span>
+                        <span class="tech-desc" data-ko="역할 기반 에이전트" data-en="Role-based Agents">역할 기반 에이전트</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">💬</span>
+                        <span class="tech-name">AutoGen AG2</span>
+                        <span class="tech-desc" data-ko="그룹챗 대화" data-en="GroupChat Dialog">그룹챗 대화</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">⚡</span>
+                        <span class="tech-name">DSPy</span>
+                        <span class="tech-desc" data-ko="프롬프트 최적화" data-en="Prompt Optimization">프롬프트 최적화</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">🔗</span>
+                        <span class="tech-name">LangChain</span>
+                        <span class="tech-desc" data-ko="LCEL 파이프라인" data-en="LCEL Pipeline">LCEL 파이프라인</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">📚</span>
+                        <span class="tech-name">LlamaIndex</span>
+                        <span class="tech-desc" data-ko="ISO 표준 RAG" data-en="ISO Standards RAG">ISO 표준 RAG</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">🦙</span>
+                        <span class="tech-name">Ollama</span>
+                        <span class="tech-desc" data-ko="로컬 LLM 추론" data-en="Local LLM Inference">로컬 LLM 추론</span>
+                    </div>
+                    <div class="tech-item glass-card">
+                        <span class="tech-icon">🚀</span>
+                        <span class="tech-name">FastAPI</span>
+                        <span class="tech-desc" data-ko="비동기 API 서버" data-en="Async API Server">비동기 API 서버</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="section-container">
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-value" data-target="100000">0</div>
+                    <div class="stat-unit" data-ko="명" data-en="">명</div>
+                    <div class="stat-label" data-ko="양성 목표 전문가 수" data-en="Target Expert Trainees">양성 목표 전문가 수</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-value" data-target="7">0</div>
+                    <div class="stat-unit" data-ko="개" data-en="">개</div>
+                    <div class="stat-label" data-ko="멀티에이전트 프레임워크" data-en="Multi-Agent Frameworks">멀티에이전트 프레임워크</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-value" data-target="171">0</div>
+                    <div class="stat-unit" data-ko="개" data-en="">개</div>
+                    <div class="stat-label" data-ko="API 엔드포인트" data-en="API Endpoints">API 엔드포인트</div>
+                </div>
+                <div class="stat-card glass-card">
+                    <div class="stat-value" data-target="5">0</div>
+                    <div class="stat-unit" data-ko="단계" data-en="Levels">단계</div>
+                    <div class="stat-label" data-ko="인증 체계" data-en="Certification Levels">인증 체계</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification" class="detection-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" data-ko="AX 전문가 인증 체계" data-en="AX Expert Certification System">AX 전문가 인증 체계</h2>
+                <p class="section-subtitle" data-ko="체계적인 5단계 인증으로 실무 전문가를 양성합니다" data-en="Training practical experts through a systematic 5-level certification">체계적인 5단계 인증으로 실무 전문가를 양성합니다</p>
+            </div>
+
+            <div class="certification-grid">
+                <div class="cert-card glass-card" style="--cert-color: #94a3b8;">
+                    <div class="cert-level">Level 1</div>
+                    <div class="cert-icon">🌱</div>
+                    <h3 class="cert-title" data-ko="입문자 (Beginner)" data-en="Beginner">입문자 (Beginner)</h3>
+                    <p class="cert-description" data-ko="AI 기본 개념 이해, AX 마인드셋 형성, 기초 도구 활용" data-en="Basic AI concepts, AX mindset formation, basic tool usage">AI 기본 개념 이해, AX 마인드셋 형성, 기초 도구 활용</p>
+                </div>
+                <div class="cert-card glass-card" style="--cert-color: #10b981;">
+                    <div class="cert-level">Level 2</div>
+                    <div class="cert-icon">🌿</div>
+                    <h3 class="cert-title" data-ko="실무자 (Practitioner)" data-en="Practitioner">실무자 (Practitioner)</h3>
+                    <p class="cert-description" data-ko="업무별 AI 적용 사례 학습, 간단한 AX 프로젝트 수행" data-en="Learn AI application cases by task, conduct simple AX projects">업무별 AI 적용 사례 학습, 간단한 AX 프로젝트 수행</p>
+                </div>
+                <div class="cert-card glass-card" style="--cert-color: #4f91ff;">
+                    <div class="cert-level">Level 3</div>
+                    <div class="cert-icon">🌳</div>
+                    <h3 class="cert-title" data-ko="전문가 (Specialist)" data-en="Specialist">전문가 (Specialist)</h3>
+                    <p class="cert-description" data-ko="도메인 특화 AX 설계, 복합 프로젝트 리드, ROI 분석" data-en="Domain-specific AX design, lead complex projects, ROI analysis">도메인 특화 AX 설계, 복합 프로젝트 리드, ROI 분석</p>
+                </div>
+                <div class="cert-card glass-card" style="--cert-color: #8b5cf6;">
+                    <div class="cert-level">Level 4</div>
+                    <div class="cert-icon">🏔️</div>
+                    <h3 class="cert-title" data-ko="숙련가 (Expert)" data-en="Expert">숙련가 (Expert)</h3>
+                    <p class="cert-description" data-ko="전사 AX 전략 수립, 멀티에이전트 설계, 조직 변화 관리" data-en="Enterprise AX strategy, multi-agent design, organizational change management">전사 AX 전략 수립, 멀티에이전트 설계, 조직 변화 관리</p>
+                </div>
+                <div class="cert-card glass-card" style="--cert-color: #f59e0b;">
+                    <div class="cert-level">Level 5</div>
+                    <div class="cert-icon">👑</div>
+                    <h3 class="cert-title" data-ko="마스터 (Master)" data-en="Master">마스터 (Master)</h3>
+                    <p class="cert-description" data-ko="산업 생태계 혁신, 국가 정책 자문, AX 멘토링 및 강의" data-en="Industry ecosystem innovation, national policy advisory, AX mentoring & teaching">산업 생태계 혁신, 국가 정책 자문, AX 멘토링 및 강의</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="demo-section">
+        <div class="section-container">
+            <div class="demo-card glass-card">
+                <h2 class="demo-title" data-ko="AI 전환, 지금 시작하세요" data-en="Start Your AI Transformation Now">AI 전환, 지금 시작하세요</h2>
+                <p class="demo-description" data-ko="100K-AX Expert 플랫폼으로 우리 조직의 AI 전환 여정을 시작해보세요. 업무 전문가가 곧 AX 전문가입니다." data-en="Start your organization's AI transformation journey with the 100K-AX Expert Platform. Domain experts become AX experts.">
+                    100K-AX Expert 플랫폼으로 우리 조직의 AI 전환 여정을 시작해보세요.<br>
+                    업무 전문가가 곧 AX 전문가입니다.
+                </p>
+                <div class="demo-buttons">
+                    <a href="#" class="demo-btn btn-glow">
+                        <span class="btn-icon">🚀</span>
+                        <div class="btn-content">
+                            <span class="btn-title" data-ko="플랫폼 데모 요청" data-en="Request Platform Demo">플랫폼 데모 요청</span>
+                            <span class="btn-subtitle" data-ko="맞춤형 데모를 경험하세요" data-en="Experience a customized demo">맞춤형 데모를 경험하세요</span>
+                        </div>
+                    </a>
+                    <a href="#" class="demo-btn btn-outline-large">
+                        <span class="btn-icon">📄</span>
+                        <div class="btn-content">
+                            <span class="btn-title" data-ko="도입 상담 신청" data-en="Request Consultation">도입 상담 신청</span>
+                            <span class="btn-subtitle" data-ko="전문 컨설턴트가 안내합니다" data-en="Expert consultants will guide you">전문 컨설턴트가 안내합니다</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="demo-info">
+                    <div class="info-item">
+                        <span class="info-icon">💡</span>
+                        <span class="info-text" data-ko="7개 산업 도메인 맞춤 솔루션" data-en="Solutions for 7 industry domains">7개 산업 도메인 맞춤 솔루션</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⚡</span>
+                        <span class="info-text" data-ko="5단계 체계적 AX 컨설팅" data-en="5-stage systematic AX consulting">5단계 체계적 AX 컨설팅</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🔒</span>
+                        <span class="info-text" data-ko="온프레미스 / 에어갭 배포 지원" data-en="On-premise / air-gapped deployment">온프레미스 / 에어갭 배포 지원</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎯</span>
+                        <span class="logo-text">100K-AX Expert</span>
+                    </div>
+                    <p class="footer-tagline" data-ko="산업 전문가 10만 명을 AX 전문가로" data-en="Transforming 100K industry experts into AX experts">산업 전문가 10만 명을 AX 전문가로</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading" data-ko="플랫폼" data-en="Platform">플랫폼</h4>
+                        <a href="#overview" class="footer-link" data-ko="개요" data-en="Overview">개요</a>
+                        <a href="#features" class="footer-link" data-ko="핵심 기능" data-en="Key Features">핵심 기능</a>
+                        <a href="#stages" class="footer-link" data-ko="5단계 프레임워크" data-en="5-Stage Framework">5단계 프레임워크</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading" data-ko="자원" data-en="Resources">자원</h4>
+                        <a href="#certification" class="footer-link" data-ko="인증 체계" data-en="Certification">인증 체계</a>
+                        <a href="#architecture" class="footer-link" data-ko="기술 아키텍처" data-en="Architecture">기술 아키텍처</a>
+                        <a href="#contact" class="footer-link" data-ko="도입 문의" data-en="Contact">도입 문의</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading" data-ko="기술" data-en="Technology">기술</h4>
+                        <span class="footer-text">FastAPI + Ollama</span>
+                        <span class="footer-text">LangGraph + CrewAI</span>
+                        <span class="footer-text">ISO 42001 / 38500</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 100K-AX Expert Platform. All rights reserved.</p>
+                <p class="footer-version">Version 4.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animation3d.js"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
