@@ -124,12 +124,14 @@
     transform: translateY(0) scale(0.95);
 }
 
-/* Feature card clickable hint */
-.feature-detail-card[data-feature] {
+/* Clickable card hint */
+.feature-detail-card[data-feature],
+.step-card[data-feature] {
     cursor: pointer;
 }
 
-.feature-detail-card[data-feature]::after {
+.feature-detail-card[data-feature]::after,
+.step-card[data-feature]::after {
     content: '';
     position: absolute;
     bottom: 12px;
@@ -148,10 +150,18 @@
     background-position: center;
 }
 
-.feature-detail-card[data-feature]:hover::after {
+.feature-detail-card[data-feature]:hover::after,
+.step-card[data-feature]:hover::after {
     background-color: rgba(79, 145, 255, 0.25);
     border-color: rgba(79, 145, 255, 0.5);
     transform: translateX(2px);
+}
+
+.step-card[data-feature]::after {
+    bottom: 8px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
 }
 
 /* ========================================

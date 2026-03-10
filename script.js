@@ -208,8 +208,8 @@ window.addEventListener('load', () => {
         return (window.i18n && window.i18n.currentLang) || localStorage.getItem('ax-lang') || 'ko';
     }
 
-    // Open modal when a feature card is clicked
-    document.querySelectorAll('.feature-detail-card[data-feature]').forEach(card => {
+    // Open modal when a feature card or step card is clicked
+    document.querySelectorAll('[data-feature]').forEach(card => {
         card.addEventListener('click', (e) => {
             // Don't open if clicking a tag
             if (e.target.classList.contains('tag')) return;
