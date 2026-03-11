@@ -128,14 +128,16 @@
 .feature-detail-card[data-feature],
 .step-card[data-feature],
 .tech-item[data-feature],
-.cert-card[data-feature] {
+.cert-card[data-feature],
+.overview-card[data-feature] {
     cursor: pointer;
 }
 
 .feature-detail-card[data-feature]::after,
 .step-card[data-feature]::after,
 .tech-item[data-feature]::after,
-.cert-card[data-feature]::after {
+.cert-card[data-feature]::after,
+.overview-card[data-feature]::after {
     content: '';
     position: absolute;
     bottom: 12px;
@@ -157,7 +159,8 @@
 .feature-detail-card[data-feature]:hover::after,
 .step-card[data-feature]:hover::after,
 .tech-item[data-feature]:hover::after,
-.cert-card[data-feature]:hover::after {
+.cert-card[data-feature]:hover::after,
+.overview-card[data-feature]:hover::after {
     background-color: rgba(79, 145, 255, 0.25);
     border-color: rgba(79, 145, 255, 0.5);
     transform: translateX(2px);

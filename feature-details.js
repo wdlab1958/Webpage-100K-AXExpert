@@ -894,6 +894,480 @@ const featureDetails = {
     // ========================================
 
     // ========================================
+    // Overview Detail Data
+    // ========================================
+
+    'overview-ax-expert': {
+        icon: '🧑‍💼',
+        title: { ko: 'AX 전문가란?', en: 'What is an AX Expert?' },
+        body: {
+            ko: `
+                <p><strong>AX(AI Transformation) 전문가</strong>는 AI 기술을 직접 개발하는 엔지니어가 아닙니다. <strong>자기 업무 도메인에서 AI를 접목하여 비용을 절감하고 품질을 높이는 실무 전문가</strong>입니다. 현장의 업무를 가장 잘 아는 사람이 AI 전환의 주인공이 됩니다.</p>
+
+                <h3>AI 엔지니어 vs AX 전문가</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>구분</th><th>AI 엔지니어</th><th>AX 전문가</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>초점</strong></td><td>모델 개발, MLOps, 인프라</td><td>업무 프로세스 AI 전환</td></tr>
+                            <tr><td><strong>핵심 역량</strong></td><td>코딩, 알고리즘, 데이터 사이언스</td><td>도메인 전문성, AX 디스커버리, ROI 분석</td></tr>
+                            <tr><td><strong>산출물</strong></td><td>AI 모델, API, 파이프라인</td><td>AX 전략, 컨설팅 보고서, ROI 실증</td></tr>
+                            <tr><td><strong>목표</strong></td><td>기술 구현</td><td>비즈니스 가치 창출</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>7개 산업 도메인별 AX 적용 사례</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>산업</th><th>대표 AX 사례</th><th>기대 ROI</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>제조업</strong></td><td>AI 비전 검사, 예지 보전, 공정 최적화</td><td>150~500%</td></tr>
+                            <tr><td><strong>금융업</strong></td><td>AI 신용평가, 이상거래 탐지, 로보어드바이저</td><td>100~400%</td></tr>
+                            <tr><td><strong>공공기관</strong></td><td>민원 자동분류, 정책 영향 분석, 복지 추천</td><td>50~200%</td></tr>
+                            <tr><td><strong>유통/물류</strong></td><td>수요 예측, 경로 최적화, 개인화 추천</td><td>80~300%</td></tr>
+                            <tr><td><strong>의료</strong></td><td>의료 영상 AI 분석, 환자 위험 예측</td><td>100~300%</td></tr>
+                            <tr><td><strong>교육</strong></td><td>적응형 학습, AI 자동채점, 중도탈락 예측</td><td>50~200%</td></tr>
+                            <tr><td><strong>국방</strong></td><td>AI 위협 탐지, 군수 수요 예측, 적응형 시뮬레이션</td><td>80~200%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>부서별 AX 전문가 활동</h3>
+                <p>각 산업 도메인 내 <strong>10개 부서별 맞춤형 AX 기회 템플릿</strong>이 제공됩니다:</p>
+                <div class="modal-chips">
+                    <span class="modal-chip">제품/기술 연구소</span>
+                    <span class="modal-chip">생산기술</span>
+                    <span class="modal-chip">생산부</span>
+                    <span class="modal-chip">품질관리</span>
+                    <span class="modal-chip">자재부</span>
+                    <span class="modal-chip">경영지원</span>
+                    <span class="modal-chip">재무/인사</span>
+                    <span class="modal-chip">영업/마케팅</span>
+                    <span class="modal-chip">수출부</span>
+                    <span class="modal-chip">고객지원</span>
+                </div>
+            `,
+            en: `
+                <p>An <strong>AX (AI Transformation) Expert</strong> is not an engineer who develops AI technology. They are <strong>practical professionals who apply AI to their own work domain to reduce costs and improve quality</strong>. The people who best understand their work become the protagonists of AI transformation.</p>
+
+                <h3>AI Engineer vs AX Expert</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Aspect</th><th>AI Engineer</th><th>AX Expert</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Focus</strong></td><td>Model development, MLOps, infrastructure</td><td>Business process AI transformation</td></tr>
+                            <tr><td><strong>Core Skills</strong></td><td>Coding, algorithms, data science</td><td>Domain expertise, AX discovery, ROI analysis</td></tr>
+                            <tr><td><strong>Deliverables</strong></td><td>AI models, APIs, pipelines</td><td>AX strategy, consulting reports, ROI proof</td></tr>
+                            <tr><td><strong>Goal</strong></td><td>Technical implementation</td><td>Business value creation</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>AX Use Cases Across 7 Industry Domains</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Industry</th><th>Key AX Use Cases</th><th>Expected ROI</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Manufacturing</strong></td><td>AI vision inspection, predictive maintenance, process optimization</td><td>150-500%</td></tr>
+                            <tr><td><strong>Finance</strong></td><td>AI credit scoring, fraud detection, robo-advisor</td><td>100-400%</td></tr>
+                            <tr><td><strong>Public Sector</strong></td><td>Auto complaint classification, policy analysis, welfare recommendation</td><td>50-200%</td></tr>
+                            <tr><td><strong>Logistics/Retail</strong></td><td>Demand forecasting, route optimization, personalized recommendations</td><td>80-300%</td></tr>
+                            <tr><td><strong>Healthcare</strong></td><td>Medical image AI analysis, patient risk prediction</td><td>100-300%</td></tr>
+                            <tr><td><strong>Education</strong></td><td>Adaptive learning, AI auto-grading, dropout prediction</td><td>50-200%</td></tr>
+                            <tr><td><strong>Defense</strong></td><td>AI threat detection, military supply forecasting, adaptive simulation</td><td>80-200%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Department-Level AX Activities</h3>
+                <p>Each industry domain provides <strong>customized AX opportunity templates for 10 departments</strong>:</p>
+                <div class="modal-chips">
+                    <span class="modal-chip">R&D Lab</span>
+                    <span class="modal-chip">Production Tech</span>
+                    <span class="modal-chip">Production</span>
+                    <span class="modal-chip">Quality Mgmt</span>
+                    <span class="modal-chip">Materials</span>
+                    <span class="modal-chip">Management</span>
+                    <span class="modal-chip">Finance/HR</span>
+                    <span class="modal-chip">Sales/Marketing</span>
+                    <span class="modal-chip">Export</span>
+                    <span class="modal-chip">Customer Support</span>
+                </div>
+            `
+        }
+    },
+
+    'overview-mission': {
+        icon: '🎯',
+        title: { ko: '미션: 10만 AX 전문가 양성', en: 'Mission: Train 100K AX Experts' },
+        body: {
+            ko: `
+                <p><strong>10,000개 기업 × 기업당 10명 = 100,000 AX 전문가</strong>를 5년간 양성하는 국가 AI 인력 양성 프로젝트입니다. 대한민국 AI 3대 강국 실현과 'AI는 한국어로' 정책을 지원합니다.</p>
+
+                <h3>핵심 목표 수치</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>지표</th><th>목표</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>양성 인원</strong></td><td>100,000명</td><td>5년 누적 AX 전문가 양성 목표</td></tr>
+                            <tr><td><strong>참여 기업</strong></td><td>10,000개사</td><td>중소~대기업, 공공기관 포함</td></tr>
+                            <tr><td><strong>기업당 인원</strong></td><td>10명</td><td>부서별 AX 리더 배출</td></tr>
+                            <tr><td><strong>대상 산업</strong></td><td>7개 도메인</td><td>제조, 금융, 공공, 물류, 의료, 교육, 국방</td></tr>
+                            <tr><td><strong>인증 체계</strong></td><td>5단계</td><td>Beginner → Practitioner → Specialist → Expert → Master</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>국가 정책 연계</h3>
+                <ul>
+                    <li><strong>AI 3대 강국</strong> — 대한민국을 미국, 중국과 함께 세계 AI 3대 강국으로 도약시키기 위한 전략. 핵심은 AI를 '사용'하는 인력의 저변 확대</li>
+                    <li><strong>'AI는 한국어로'</strong> — 한국어 기반 AI 개발과 거버넌스 추진 정책. Ollama 로컬 LLM으로 한국어 전문 컨설팅 지원</li>
+                    <li><strong>산업 디지털 전환</strong> — 전 산업의 AI 전환을 가속화하기 위한 실무 인력 양성 기반 마련</li>
+                </ul>
+
+                <h3>성과 추적 KPI</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>KPI</th><th>측정 방법</th><th>대시보드</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>등록 사용자 수</strong></td><td>누적 가입 (→ 10만 목표)</td><td>진행률 프로그래스 바</td></tr>
+                            <tr><td><strong>참여 기업 수</strong></td><td>기업별 등록 (→ 1만 목표)</td><td>기업 대시보드</td></tr>
+                            <tr><td><strong>완료 AX 프로젝트</strong></td><td>과제 완료 건수</td><td>기업/부서별 집계</td></tr>
+                            <tr><td><strong>인증 등급 분포</strong></td><td>5단계별 인원 분포</td><td>도넛 차트</td></tr>
+                            <tr><td><strong>산업 도메인 분포</strong></td><td>7개 도메인별 분포</td><td>도넛 차트</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>추진 체계</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">기업별 대시보드</span>
+                    <span class="modal-chip">부서별 전환율 추적</span>
+                    <span class="modal-chip">개인 성장 이력 관리</span>
+                    <span class="modal-chip">배지 자동 수여</span>
+                    <span class="modal-chip">인증 자동 평가</span>
+                </div>
+            `,
+            en: `
+                <p>A national AI workforce project to train <strong>10,000 companies × 10 people = 100,000 AX Experts</strong> over 5 years. Supports Korea's "Top 3 AI Nation" goal and "AI in Korean" policy.</p>
+
+                <h3>Core Target Metrics</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Target</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Personnel</strong></td><td>100,000</td><td>5-year cumulative AX expert training goal</td></tr>
+                            <tr><td><strong>Companies</strong></td><td>10,000</td><td>SMEs to enterprises, incl. public sector</td></tr>
+                            <tr><td><strong>Per Company</strong></td><td>10 people</td><td>AX leaders per department</td></tr>
+                            <tr><td><strong>Industries</strong></td><td>7 domains</td><td>Manufacturing, Finance, Public, Logistics, Healthcare, Education, Defense</td></tr>
+                            <tr><td><strong>Certification</strong></td><td>5 levels</td><td>Beginner → Practitioner → Specialist → Expert → Master</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>National Policy Alignment</h3>
+                <ul>
+                    <li><strong>Top 3 AI Nation</strong> — Korea's strategic goal alongside the US and China. Key focus on expanding the base of people who 'use' AI</li>
+                    <li><strong>"AI in Korean"</strong> — Policy promoting Korean-language AI development and governance. Supported by Ollama local LLM for Korean consulting</li>
+                    <li><strong>Industrial Digital Transformation</strong> — Building a practical workforce foundation to accelerate AI transformation across all industries</li>
+                </ul>
+
+                <h3>Performance Tracking KPIs</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>KPI</th><th>Measurement</th><th>Dashboard</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Registered Users</strong></td><td>Cumulative signups (→ 100K target)</td><td>Progress bar</td></tr>
+                            <tr><td><strong>Participating Companies</strong></td><td>Company registrations (→ 10K target)</td><td>Enterprise dashboard</td></tr>
+                            <tr><td><strong>Completed AX Projects</strong></td><td>Task completion count</td><td>Company/dept aggregation</td></tr>
+                            <tr><td><strong>Certification Distribution</strong></td><td>Personnel across 5 levels</td><td>Doughnut chart</td></tr>
+                            <tr><td><strong>Industry Distribution</strong></td><td>Across 7 domains</td><td>Doughnut chart</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Implementation Framework</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Enterprise Dashboards</span>
+                    <span class="modal-chip">Dept. Conversion Tracking</span>
+                    <span class="modal-chip">Individual Growth History</span>
+                    <span class="modal-chip">Auto Badge Awards</span>
+                    <span class="modal-chip">Auto Certification Eval</span>
+                </div>
+            `
+        }
+    },
+
+    'overview-capabilities': {
+        icon: '⚙️',
+        title: { ko: '플랫폼 핵심 역량', en: 'Platform Core Capabilities' },
+        body: {
+            ko: `
+                <p>100K-AX Expert 플랫폼은 <strong>7개 멀티에이전트 프레임워크, 5단계 컨설팅 프레임워크, 4개 ISO 국제표준, 171개 REST API</strong>를 통합하여 AX 컨설팅의 전 과정을 자동화합니다.</p>
+
+                <h3>7개 멀티에이전트 통합 오케스트레이션</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>프레임워크</th><th>방식</th><th>구성</th><th>특화 기능</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Native</strong></td><td>Sequential</td><td>5 에이전트</td><td>자체 오케스트레이션 엔진</td></tr>
+                            <tr><td><strong>LangGraph</strong></td><td>StateGraph</td><td>8 노드</td><td>조건부 엣지, 자동 재시도</td></tr>
+                            <tr><td><strong>CrewAI</strong></td><td>Role-Based</td><td>5 에이전트, 6 태스크</td><td>역할 분담 협업</td></tr>
+                            <tr><td><strong>AutoGen AG2</strong></td><td>GroupChat</td><td>5 에이전트</td><td>합의 기반 토론</td></tr>
+                            <tr><td><strong>DSPy</strong></td><td>Signatures</td><td>5 Sig, 5 CoT</td><td>프롬프트 자동 최적화</td></tr>
+                            <tr><td><strong>LangChain</strong></td><td>LCEL</td><td>5 Chain</td><td>파이프라인 체이닝</td></tr>
+                            <tr><td><strong>LlamaIndex</strong></td><td>RAG</td><td>4 ISO 문서</td><td>표준 기반 근거 제공</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>5단계 컨설팅 프레임워크</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>단계</th><th>명칭</th><th>주요 기능</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1. Strategy</strong></td><td>AI 비전 & 전략</td><td>성숙도 진단, 기회 식별, 로드맵 설계</td></tr>
+                            <tr><td><strong>2. Design</strong></td><td>유스케이스 설계</td><td>요구사항 정의, 아키텍처, 거버넌스</td></tr>
+                            <tr><td><strong>3. Build</strong></td><td>솔루션 구축</td><td>PoC 검증, 플랫폼 구축, 시스템 통합</td></tr>
+                            <tr><td><strong>4. Validate</strong></td><td>파일럿 & 확산</td><td>파일럿 운영, 변화관리, 전사 확산</td></tr>
+                            <tr><td><strong>5. Operate</strong></td><td>운영 & 최적화</td><td>모니터링, 지속 개선, 거버넌스 리뷰</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>AX 디스커버리 — 4차원 기회 분석</h3>
+                <ul>
+                    <li><strong>자동화 잠재력</strong> — 프로세스의 AI 자동화 가능성 점수</li>
+                    <li><strong>비즈니스 임팩트</strong> — 자동화 시 사업 영향도</li>
+                    <li><strong>실현 가능성</strong> — 구현 용이도 (데이터, 기술, 인력)</li>
+                    <li><strong>ROI 추정치</strong> — 예상 투자 대비 수익률</li>
+                </ul>
+                <p>가중치: <strong>ROI 30%</strong> + 실행용이 25% + 데이터준비 25% + 조직준비 20% = 종합 점수</p>
+
+                <h3>통합 기능</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">171 REST APIs</span>
+                    <span class="modal-chip">4 ISO 표준 내장</span>
+                    <span class="modal-chip">자동 보고서 생성</span>
+                    <span class="modal-chip">3 시나리오 ROI 분석</span>
+                    <span class="modal-chip">4대 리스크 평가</span>
+                    <span class="modal-chip">DOCX/PDF/PPTX 출력</span>
+                </div>
+            `,
+            en: `
+                <p>The 100K-AX Expert Platform integrates <strong>7 multi-agent frameworks, 5-stage consulting framework, 4 ISO international standards, and 171 REST APIs</strong> to automate the entire AX consulting process.</p>
+
+                <h3>7-Framework Multi-Agent Orchestration</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Framework</th><th>Type</th><th>Config</th><th>Specialty</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Native</strong></td><td>Sequential</td><td>5 agents</td><td>Custom orchestration engine</td></tr>
+                            <tr><td><strong>LangGraph</strong></td><td>StateGraph</td><td>8 nodes</td><td>Conditional edges, auto-retry</td></tr>
+                            <tr><td><strong>CrewAI</strong></td><td>Role-Based</td><td>5 agents, 6 tasks</td><td>Role-based collaboration</td></tr>
+                            <tr><td><strong>AutoGen AG2</strong></td><td>GroupChat</td><td>5 agents</td><td>Consensus-based discussion</td></tr>
+                            <tr><td><strong>DSPy</strong></td><td>Signatures</td><td>5 Sig, 5 CoT</td><td>Auto prompt optimization</td></tr>
+                            <tr><td><strong>LangChain</strong></td><td>LCEL</td><td>5 chains</td><td>Pipeline chaining</td></tr>
+                            <tr><td><strong>LlamaIndex</strong></td><td>RAG</td><td>4 ISO docs</td><td>Standards-based evidence</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>5-Stage Consulting Framework</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Stage</th><th>Name</th><th>Key Functions</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1. Strategy</strong></td><td>AI Vision & Strategy</td><td>Maturity diagnosis, opportunity ID, roadmap</td></tr>
+                            <tr><td><strong>2. Design</strong></td><td>Use Case Design</td><td>Requirements, architecture, governance</td></tr>
+                            <tr><td><strong>3. Build</strong></td><td>Solution Build</td><td>PoC validation, platform setup, integration</td></tr>
+                            <tr><td><strong>4. Validate</strong></td><td>Pilot & Scale-Out</td><td>Pilot ops, change mgmt, enterprise rollout</td></tr>
+                            <tr><td><strong>5. Operate</strong></td><td>Operate & Optimize</td><td>Monitoring, continuous improvement, governance</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>AX Discovery — 4-Dimensional Analysis</h3>
+                <ul>
+                    <li><strong>Automation Potential</strong> — AI automation feasibility score</li>
+                    <li><strong>Business Impact</strong> — Business impact if automated</li>
+                    <li><strong>Feasibility</strong> — Implementation ease (data, tech, people)</li>
+                    <li><strong>ROI Estimate</strong> — Expected return on investment</li>
+                </ul>
+                <p>Weights: <strong>ROI 30%</strong> + Implementation Ease 25% + Data Readiness 25% + Org Readiness 20% = Total Score</p>
+
+                <h3>Integrated Capabilities</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">171 REST APIs</span>
+                    <span class="modal-chip">4 ISO Standards Built-in</span>
+                    <span class="modal-chip">Auto Report Generation</span>
+                    <span class="modal-chip">3-Scenario ROI Analysis</span>
+                    <span class="modal-chip">4-Category Risk Assessment</span>
+                    <span class="modal-chip">DOCX/PDF/PPTX Output</span>
+                </div>
+            `
+        }
+    },
+
+    'overview-security': {
+        icon: '🔒',
+        title: { ko: '보안 및 프라이버시', en: 'Security & Privacy' },
+        body: {
+            ko: `
+                <p>100K-AX Expert 플랫폼은 <strong>로컬 LLM 기반 완전 오프라인 운영</strong>으로 기업의 민감 데이터를 보호합니다. 4등급 데이터 분류, 자동 차단, 종합 감사 로깅으로 기업 및 공공기관의 보안 요구를 충족합니다.</p>
+
+                <h3>4등급 데이터 분류 체계</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>등급</th><th>분류</th><th>상태</th><th>온라인 전송</th><th>예시</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Level 1</strong></td><td>PUBLIC</td><td style="color:#10b981">Green</td><td>허용</td><td>일반 정보</td></tr>
+                            <tr><td><strong>Level 2</strong></td><td>INTERNAL</td><td style="color:#f59e0b">Yellow</td><td>익명화 후 허용</td><td>내부 문서, 직원 수</td></tr>
+                            <tr><td><strong>Level 3</strong></td><td>CONFIDENTIAL</td><td style="color:#f97316">Orange</td><td>로컬 전용</td><td>기업명, 재무 데이터, 이메일</td></tr>
+                            <tr><td><strong>Level 4</strong></td><td>TOP_SECRET</td><td style="color:#ef4444">Red</td><td>차단</td><td>주민번호, 카드번호, 비밀번호, API 키</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>보안 아키텍처</h3>
+                <ul>
+                    <li><strong>Ollama 로컬 LLM</strong> — 모든 AI 추론이 사내 서버에서 실행, 데이터가 외부로 전송되지 않음</li>
+                    <li><strong>AES-256-GCM 암호화</strong> — 저장 데이터의 인증된 암호화, 무결성 보장</li>
+                    <li><strong>JWT/OAuth 2.0</strong> — 토큰 기반 세션 관리, Bearer 인증</li>
+                    <li><strong>RBAC 권한 관리</strong> — 5단계 인증 기반 역할별 접근 제어</li>
+                    <li><strong>쿼리 라우터</strong> — 데이터 민감도에 따라 로컬/온라인 LLM 자동 분기</li>
+                    <li><strong>자동 비식별화</strong> — 25종 이상 개인정보 패턴 자동 감지 및 마스킹</li>
+                </ul>
+
+                <h3>감사 로깅 시스템</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>이벤트 유형</th><th>설명</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>QUERY_RECEIVED</strong></td><td>입력 쿼리 기록</td></tr>
+                            <tr><td><strong>QUERY_CLASSIFIED</strong></td><td>데이터 민감도 분류 결과</td></tr>
+                            <tr><td><strong>SENSITIVE_DATA_DETECTED</strong></td><td>PII/기밀 데이터 감지</td></tr>
+                            <tr><td><strong>DATA_BLOCKED</strong></td><td>민감 데이터 전송 차단</td></tr>
+                            <tr><td><strong>POLICY_VIOLATION</strong></td><td>보안 정책 위반 감지</td></tr>
+                            <tr><td><strong>UNAUTHORIZED_ACCESS</strong></td><td>비인가 접근 거부</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>고위험 키워드 자동 감지 (14종)</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">CEO</span>
+                    <span class="modal-chip">비밀</span>
+                    <span class="modal-chip">기밀</span>
+                    <span class="modal-chip">영업비밀</span>
+                    <span class="modal-chip">특허</span>
+                    <span class="modal-chip">경쟁사</span>
+                    <span class="modal-chip">인수합병</span>
+                    <span class="modal-chip">NDA</span>
+                    <span class="modal-chip">MOU</span>
+                    <span class="modal-chip">계약서</span>
+                    <span class="modal-chip">주주</span>
+                    <span class="modal-chip">지분</span>
+                    <span class="modal-chip">투자자</span>
+                    <span class="modal-chip">내부용</span>
+                </div>
+            `,
+            en: `
+                <p>The 100K-AX Expert Platform protects sensitive enterprise data through <strong>fully offline operation based on local LLM</strong>. 4-level data classification, automatic blocking, and comprehensive audit logging meet enterprise and government security requirements.</p>
+
+                <h3>4-Level Data Classification System</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Level</th><th>Classification</th><th>Status</th><th>Online Transmission</th><th>Examples</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Level 1</strong></td><td>PUBLIC</td><td style="color:#10b981">Green</td><td>Allowed</td><td>General information</td></tr>
+                            <tr><td><strong>Level 2</strong></td><td>INTERNAL</td><td style="color:#f59e0b">Yellow</td><td>After anonymization</td><td>Internal docs, headcount</td></tr>
+                            <tr><td><strong>Level 3</strong></td><td>CONFIDENTIAL</td><td style="color:#f97316">Orange</td><td>Local only</td><td>Company names, financials, emails</td></tr>
+                            <tr><td><strong>Level 4</strong></td><td>TOP_SECRET</td><td style="color:#ef4444">Red</td><td>BLOCKED</td><td>SSN, credit cards, passwords, API keys</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Security Architecture</h3>
+                <ul>
+                    <li><strong>Ollama Local LLM</strong> — All AI inference runs on-premise, no data leaves the server</li>
+                    <li><strong>AES-256-GCM Encryption</strong> — Authenticated encryption for data at rest with integrity guarantee</li>
+                    <li><strong>JWT/OAuth 2.0</strong> — Token-based session management, Bearer authentication</li>
+                    <li><strong>RBAC Authorization</strong> — Role-based access control via 5-level certification</li>
+                    <li><strong>Query Router</strong> — Auto-routes to local/online LLM based on data sensitivity</li>
+                    <li><strong>Auto De-identification</strong> — 25+ PII patterns auto-detected and masked</li>
+                </ul>
+
+                <h3>Audit Logging System</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Event Type</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>QUERY_RECEIVED</strong></td><td>Input query logging</td></tr>
+                            <tr><td><strong>QUERY_CLASSIFIED</strong></td><td>Data sensitivity classification result</td></tr>
+                            <tr><td><strong>SENSITIVE_DATA_DETECTED</strong></td><td>PII/confidential data flagged</td></tr>
+                            <tr><td><strong>DATA_BLOCKED</strong></td><td>Sensitive data transmission blocked</td></tr>
+                            <tr><td><strong>POLICY_VIOLATION</strong></td><td>Security policy violation detected</td></tr>
+                            <tr><td><strong>UNAUTHORIZED_ACCESS</strong></td><td>Unauthorized access denied</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>High-Risk Keyword Auto-Detection (14 types)</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">CEO</span>
+                    <span class="modal-chip">Secret</span>
+                    <span class="modal-chip">Confidential</span>
+                    <span class="modal-chip">Trade Secret</span>
+                    <span class="modal-chip">Patent</span>
+                    <span class="modal-chip">Competitor</span>
+                    <span class="modal-chip">M&A</span>
+                    <span class="modal-chip">NDA</span>
+                    <span class="modal-chip">MOU</span>
+                    <span class="modal-chip">Contract</span>
+                    <span class="modal-chip">Shareholder</span>
+                    <span class="modal-chip">Equity</span>
+                    <span class="modal-chip">Investor</span>
+                    <span class="modal-chip">Internal Use</span>
+                </div>
+            `
+        }
+    },
+
+    // ========================================
     // Certification Level Detail Data
     // ========================================
 
