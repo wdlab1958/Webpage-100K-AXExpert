@@ -894,6 +894,569 @@ const featureDetails = {
     // ========================================
 
     // ========================================
+    // 5-Stage Consulting Framework Detail Data
+    // ========================================
+
+    'stage-strategy': {
+        icon: '🎯',
+        title: { ko: 'Stage 1: AI 비전 & 전략', en: 'Stage 1: AI Vision & Strategy' },
+        body: {
+            ko: `
+                <p>AX 컨설팅의 첫 단계로, <strong>AI 성숙도 진단, 기회 발굴, 전략 로드맵 설계</strong>를 수행합니다. CMMI 5단계 모델 기반으로 조직의 현재 수준을 객관적으로 평가하고, 구체적인 AI 비전과 목표를 설정합니다.</p>
+
+                <h3>4차원 성숙도 진단</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>평가 차원</th><th>평가 항목 수</th><th>평가 내용</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>전략/비전</strong></td><td>4개 항목</td><td>AI 비전 명확성, 전략 연계, 리더십 지원, 예산 계획</td></tr>
+                            <tr><td><strong>조직/역량</strong></td><td>4개 항목</td><td>AI 인재, 교육 체계, 조직 문화, 변화 관리 역량</td></tr>
+                            <tr><td><strong>데이터/기술</strong></td><td>4개 항목</td><td>데이터 품질, 인프라, 기술 스택, 보안 체계</td></tr>
+                            <tr><td><strong>프로세스/거버넌스</strong></td><td>4개 항목</td><td>프로세스 표준화, 의사결정 체계, 윤리 규정, 품질 관리</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>CMMI 5단계 성숙도 레벨</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>레벨</th><th>명칭</th><th>점수</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1</strong></td><td>Initial</td><td>1.0~1.4</td><td>AI 활용 초기, 비체계적 접근</td></tr>
+                            <tr><td><strong>2</strong></td><td>Repeatable</td><td>1.5~2.4</td><td>일부 프로젝트 반복 가능, 기초 역량 형성</td></tr>
+                            <tr><td><strong>3</strong></td><td>Defined</td><td>2.5~3.4</td><td>표준 프로세스 정의, 조직적 접근 시작</td></tr>
+                            <tr><td><strong>4</strong></td><td>Managed</td><td>3.5~4.4</td><td>정량적 관리, 성과 측정 체계화</td></tr>
+                            <tr><td><strong>5</strong></td><td>Optimized</td><td>4.5~5.0</td><td>지속 혁신, 최적화 자동 운영</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>기회 발굴 — 2×2 우선순위 매트릭스</h3>
+                <ul>
+                    <li><strong>Quick Win</strong> — 높은 가치 × 높은 실현가능성 → 즉시 착수 (6개월 내)</li>
+                    <li><strong>Strategic</strong> — 높은 가치 × 낮은 실현가능성 → 전략적 투자 (6~18개월)</li>
+                    <li><strong>Long-term</strong> — 낮은 가치 × 높은 실현가능성 → 장기 과제 (18개월+)</li>
+                    <li><strong>Avoid</strong> — 낮은 가치 × 낮은 실현가능성 → 보류 또는 제외</li>
+                </ul>
+
+                <h3>산출물</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">성숙도 진단 보고서</span>
+                    <span class="modal-chip">기회 파이프라인</span>
+                    <span class="modal-chip">3단계 전략 로드맵</span>
+                    <span class="modal-chip">AI 비전 선언문</span>
+                    <span class="modal-chip">KPI 정의서</span>
+                </div>
+            `,
+            en: `
+                <p>The first stage of AX consulting performs <strong>AI maturity diagnosis, opportunity discovery, and strategic roadmap design</strong>. Objectively evaluates the organization's current level based on the CMMI 5-level model and sets specific AI vision and goals.</p>
+
+                <h3>4-Dimensional Maturity Assessment</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Dimension</th><th>Items</th><th>Evaluation Areas</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Strategy/Vision</strong></td><td>4 items</td><td>AI vision clarity, strategic alignment, leadership, budget</td></tr>
+                            <tr><td><strong>Organization/Capability</strong></td><td>4 items</td><td>AI talent, training system, culture, change management</td></tr>
+                            <tr><td><strong>Data/Technology</strong></td><td>4 items</td><td>Data quality, infrastructure, tech stack, security</td></tr>
+                            <tr><td><strong>Process/Governance</strong></td><td>4 items</td><td>Process standardization, decision-making, ethics, quality mgmt</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>CMMI 5-Level Maturity Model</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Level</th><th>Name</th><th>Score</th><th>Characteristics</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1</strong></td><td>Initial</td><td>1.0-1.4</td><td>Early AI adoption, ad-hoc approach</td></tr>
+                            <tr><td><strong>2</strong></td><td>Repeatable</td><td>1.5-2.4</td><td>Some repeatable projects, basic capabilities</td></tr>
+                            <tr><td><strong>3</strong></td><td>Defined</td><td>2.5-3.4</td><td>Standardized processes, organizational approach</td></tr>
+                            <tr><td><strong>4</strong></td><td>Managed</td><td>3.5-4.4</td><td>Quantitative management, systematic measurement</td></tr>
+                            <tr><td><strong>5</strong></td><td>Optimized</td><td>4.5-5.0</td><td>Continuous innovation, automated optimization</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Opportunity Discovery — 2×2 Priority Matrix</h3>
+                <ul>
+                    <li><strong>Quick Win</strong> — High Value × High Feasibility → Immediate start (within 6 months)</li>
+                    <li><strong>Strategic</strong> — High Value × Low Feasibility → Strategic investment (6-18 months)</li>
+                    <li><strong>Long-term</strong> — Low Value × High Feasibility → Long-term initiative (18+ months)</li>
+                    <li><strong>Avoid</strong> — Low Value × Low Feasibility → Defer or exclude</li>
+                </ul>
+
+                <h3>Deliverables</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Maturity Assessment Report</span>
+                    <span class="modal-chip">Opportunity Pipeline</span>
+                    <span class="modal-chip">3-Phase Strategic Roadmap</span>
+                    <span class="modal-chip">AI Vision Statement</span>
+                    <span class="modal-chip">KPI Definitions</span>
+                </div>
+            `
+        }
+    },
+
+    'stage-design': {
+        icon: '✏️',
+        title: { ko: 'Stage 2: 유스케이스 & 설계', en: 'Stage 2: Use Case & Design' },
+        body: {
+            ko: `
+                <p>발굴된 AX 기회를 <strong>상세 유스케이스로 정의하고, 아키텍처와 거버넌스를 설계</strong>합니다. 4D 분석(Discover, Define, Design, Deliver) 방법론으로 체계적으로 접근하며, AI 솔루션의 기술적 청사진을 완성합니다.</p>
+
+                <h3>3대 설계 활동</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>활동</th><th>내용</th><th>산출물</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>상세 요건 정의</strong></td><td>유스케이스 명세, 기능/비기능 요구사항, 데이터 요건</td><td>유스케이스 명세서</td></tr>
+                            <tr><td><strong>아키텍처 설계</strong></td><td>AI 아키텍처 선정, 기술 스택 선정, 데이터 파이프라인, MLOps 환경</td><td>아키텍처 설계서</td></tr>
+                            <tr><td><strong>거버넌스 설계</strong></td><td>AI 거버넌스 정책, 윤리/컴플라이언스 프레임워크, 리스크 관리</td><td>거버넌스 프레임워크</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>4D 분석 방법론</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>단계</th><th>활동</th><th>핵심 질문</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Discover</strong></td><td>업무 프로세스 분석, AI 적용점 식별</td><td>어떤 업무에 AI를 적용할 수 있는가?</td></tr>
+                            <tr><td><strong>Define</strong></td><td>요구사항 정의, 성공 기준 설정</td><td>무엇을 달성해야 하는가?</td></tr>
+                            <tr><td><strong>Design</strong></td><td>솔루션 아키텍처, 데이터 플로우 설계</td><td>어떻게 구현할 것인가?</td></tr>
+                            <tr><td><strong>Deliver</strong></td><td>구현 계획, 타임라인, 자원 배분</td><td>언제, 누가, 어떤 자원으로?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>아키텍처 패턴 옵션</h3>
+                <ul>
+                    <li><strong>Microservices</strong> — 독립 배포 가능, 확장성 우수, 복잡도 관리 필요</li>
+                    <li><strong>Serverless</strong> — 비용 효율, 자동 스케일링, 콜드 스타트 주의</li>
+                    <li><strong>Container</strong> — 일관된 환경, 이식성, 오케스트레이션 필요</li>
+                </ul>
+
+                <h3>적용 ISO 표준</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">ISO/IEC 23053 (ML 프레임워크)</span>
+                    <span class="modal-chip">ISO/IEC 38500 (IT 거버넌스)</span>
+                    <span class="modal-chip">Use Case Designer 에이전트</span>
+                    <span class="modal-chip">기술 스택 추천</span>
+                </div>
+            `,
+            en: `
+                <p>Transforms discovered AX opportunities into <strong>detailed use cases, architecture designs, and governance frameworks</strong>. Uses the 4D analysis methodology (Discover, Define, Design, Deliver) for a systematic approach, completing the technical blueprint for AI solutions.</p>
+
+                <h3>3 Core Design Activities</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Activity</th><th>Content</th><th>Deliverable</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Requirements Definition</strong></td><td>Use case spec, functional/non-functional requirements, data requirements</td><td>Use Case Specification</td></tr>
+                            <tr><td><strong>Architecture Design</strong></td><td>AI architecture selection, tech stack, data pipeline, MLOps setup</td><td>Architecture Design Doc</td></tr>
+                            <tr><td><strong>Governance Design</strong></td><td>AI governance policies, ethics/compliance framework, risk management</td><td>Governance Framework</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>4D Analysis Methodology</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Phase</th><th>Activities</th><th>Key Question</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Discover</strong></td><td>Process analysis, AI opportunity identification</td><td>Where can AI be applied?</td></tr>
+                            <tr><td><strong>Define</strong></td><td>Requirements definition, success criteria</td><td>What must be achieved?</td></tr>
+                            <tr><td><strong>Design</strong></td><td>Solution architecture, data flow design</td><td>How to implement?</td></tr>
+                            <tr><td><strong>Deliver</strong></td><td>Implementation plan, timeline, resource allocation</td><td>When, who, with what resources?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Architecture Pattern Options</h3>
+                <ul>
+                    <li><strong>Microservices</strong> — Independent deployment, excellent scalability, complexity management needed</li>
+                    <li><strong>Serverless</strong> — Cost-efficient, auto-scaling, cold start consideration</li>
+                    <li><strong>Container</strong> — Consistent environments, portability, orchestration needed</li>
+                </ul>
+
+                <h3>Applied ISO Standards</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">ISO/IEC 23053 (ML Framework)</span>
+                    <span class="modal-chip">ISO/IEC 38500 (IT Governance)</span>
+                    <span class="modal-chip">Use Case Designer Agent</span>
+                    <span class="modal-chip">Tech Stack Recommendation</span>
+                </div>
+            `
+        }
+    },
+
+    'stage-build': {
+        icon: '🔧',
+        title: { ko: 'Stage 3: 플랫폼 & 솔루션 구축', en: 'Stage 3: Platform & Solution Build' },
+        body: {
+            ko: `
+                <p>설계를 실제 시스템으로 구현하는 단계입니다. <strong>PoC 검증 → 플랫폼 구축 → 시스템 통합</strong>의 3단계로 진행하며, 7개 멀티에이전트 프레임워크를 최적으로 조합하여 솔루션을 구현합니다.</p>
+
+                <h3>3단계 구축 프로세스</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>단계</th><th>활동</th><th>성공 기준</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>PoC 수행</strong></td><td>기술 실현가능성 검증, 성능 기준선 수립, 리스크 식별</td><td>핵심 기능 동작 확인, 성능 목표 충족</td></tr>
+                            <tr><td><strong>플랫폼 구축</strong></td><td>인프라 셋업, 솔루션 개발, 배포 전략 수립</td><td>MVP 완성, 모니터링 구축</td></tr>
+                            <tr><td><strong>시스템 통합</strong></td><td>데이터 파이프라인 연동, API 통합, 시스템 검증</td><td>통합 테스트 통과율 95%+</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>7개 에이전트 프레임워크 활용</h3>
+                <p>과제의 특성에 따라 최적의 프레임워크를 선택하거나 조합합니다:</p>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>프레임워크</th><th>최적 활용 시나리오</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>LangGraph</strong></td><td>복잡한 조건 분기가 있는 순차 워크플로우</td></tr>
+                            <tr><td><strong>CrewAI</strong></td><td>역할 분담이 명확한 팀 협업 과제</td></tr>
+                            <tr><td><strong>AutoGen AG2</strong></td><td>다각도 검토가 필요한 토론형 과제</td></tr>
+                            <tr><td><strong>DSPy</strong></td><td>프롬프트 최적화가 중요한 정밀 분석</td></tr>
+                            <tr><td><strong>LangChain</strong></td><td>체인 기반 순차 파이프라인 구성</td></tr>
+                            <tr><td><strong>LlamaIndex</strong></td><td>ISO 표준/문서 기반 RAG 필요 시</td></tr>
+                            <tr><td><strong>Native</strong></td><td>빠른 순차 실행, 직접적 제어 필요 시</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>핵심 성과 지표</h3>
+                <ul>
+                    <li><strong>PoC 성공률</strong> — 기술 실현가능성 검증 결과</li>
+                    <li><strong>성능 지표</strong> — 정확도, 응답 지연(p50/p95/p99), 처리량</li>
+                    <li><strong>통합 테스트 통과율</strong> — API 연동, 데이터 플로우 검증</li>
+                    <li><strong>시스템 준비도</strong> — 배포 파이프라인, 모니터링 완비 여부</li>
+                </ul>
+
+                <h3>산출물</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">PoC 결과 보고서</span>
+                    <span class="modal-chip">AI 솔루션 (MVP)</span>
+                    <span class="modal-chip">플랫폼 문서</span>
+                    <span class="modal-chip">통합 테스트 결과</span>
+                    <span class="modal-chip">배포 파이프라인</span>
+                </div>
+            `,
+            en: `
+                <p>The stage where designs become real systems. Proceeds through <strong>PoC validation → Platform build → System integration</strong>, implementing solutions by optimally combining 7 multi-agent frameworks.</p>
+
+                <h3>3-Phase Build Process</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Phase</th><th>Activities</th><th>Success Criteria</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>PoC Execution</strong></td><td>Technical feasibility validation, performance baseline, risk identification</td><td>Core function verified, performance targets met</td></tr>
+                            <tr><td><strong>Platform Build</strong></td><td>Infrastructure setup, solution development, deployment strategy</td><td>MVP complete, monitoring in place</td></tr>
+                            <tr><td><strong>System Integration</strong></td><td>Data pipeline connection, API integration, system validation</td><td>Integration test pass rate 95%+</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>7 Agent Framework Selection</h3>
+                <p>Select or combine the optimal framework based on task characteristics:</p>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Framework</th><th>Best Use Scenario</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>LangGraph</strong></td><td>Sequential workflows with complex conditional branching</td></tr>
+                            <tr><td><strong>CrewAI</strong></td><td>Team collaboration with clear role division</td></tr>
+                            <tr><td><strong>AutoGen AG2</strong></td><td>Discussion-based tasks requiring multi-perspective review</td></tr>
+                            <tr><td><strong>DSPy</strong></td><td>Precision analysis where prompt optimization is critical</td></tr>
+                            <tr><td><strong>LangChain</strong></td><td>Chain-based sequential pipeline construction</td></tr>
+                            <tr><td><strong>LlamaIndex</strong></td><td>RAG needed for ISO standards/document retrieval</td></tr>
+                            <tr><td><strong>Native</strong></td><td>Fast sequential execution, direct control needed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Key Performance Metrics</h3>
+                <ul>
+                    <li><strong>PoC Success Rate</strong> — Technical feasibility validation results</li>
+                    <li><strong>Performance Metrics</strong> — Accuracy, latency (p50/p95/p99), throughput</li>
+                    <li><strong>Integration Test Pass Rate</strong> — API connectivity, data flow verification</li>
+                    <li><strong>System Readiness</strong> — Deployment pipeline, monitoring completeness</li>
+                </ul>
+
+                <h3>Deliverables</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">PoC Results Report</span>
+                    <span class="modal-chip">AI Solution (MVP)</span>
+                    <span class="modal-chip">Platform Documentation</span>
+                    <span class="modal-chip">Integration Test Results</span>
+                    <span class="modal-chip">Deployment Pipeline</span>
+                </div>
+            `
+        }
+    },
+
+    'stage-validate': {
+        icon: '✅',
+        title: { ko: 'Stage 4: 파일럿 & 확산', en: 'Stage 4: Pilot & Scale' },
+        body: {
+            ko: `
+                <p>구축된 솔루션을 실환경에서 검증하는 단계입니다. <strong>파일럿 운영, ROI 검증(NPV/IRR/회수기간), 위험 분석(FMEA/몬테카를로)</strong>을 수행하고, 성공 사례 기반 전사 확산 전략을 수립합니다.</p>
+
+                <h3>3대 검증 활동</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>활동</th><th>내용</th><th>핵심 기준</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>파일럿 운영</strong></td><td>소규모 실환경 테스트, 사용자 수용성 검증</td><td>사용자 만족도, 시스템 안정성, 성능, ROI</td></tr>
+                            <tr><td><strong>변화 관리</strong></td><td>조직 준비도 평가, 교육 프로그램, 커뮤니케이션 전략</td><td>교육 이수율, 저항 완화도</td></tr>
+                            <tr><td><strong>전사 확산</strong></td><td>단계별 롤아웃 계획, 자원 배분, 성공 지표</td><td>부서별 채택률, 전환율</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>ROI 검증 지표</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>지표</th><th>산출 방식</th><th>판단 기준</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ROI %</strong></td><td>(3년 이익 - 총비용) / 총비용 × 100</td><td>> 50%: 강력 추천</td></tr>
+                            <tr><td><strong>NPV</strong></td><td>-투자 + Σ(연이익/(1+0.1)^년)</td><td>> 0: 투자 가치 있음</td></tr>
+                            <tr><td><strong>IRR</strong></td><td>내부수익률 계산</td><td>> 10%: 양호</td></tr>
+                            <tr><td><strong>Payback</strong></td><td>초기투자 / (연간이익/12)</td><td>< 24개월: 양호</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>위험 분석 프레임워크</h3>
+                <ul>
+                    <li><strong>FMEA</strong> — 고장 모드 및 영향 분석. RPN = 심각도(1-10) × 발생빈도(1-10) × 감지능력(1-10)</li>
+                    <li><strong>몬테카를로 시뮬레이션</strong> — 확률적 리스크 정량화, 최악/최선/기대 시나리오 산출</li>
+                    <li><strong>4대 리스크 카테고리</strong> — 기술, 조직, 비즈니스, 운영 리스크별 확률×영향(1~25점) 평가</li>
+                    <li><strong>Go/No-Go 의사결정</strong> — Risk Assessor 에이전트의 종합 판단 및 완화 전략 제시</li>
+                </ul>
+
+                <h3>산출물</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">파일럿 실행 보고서</span>
+                    <span class="modal-chip">ROI/NPV/IRR 분석</span>
+                    <span class="modal-chip">FMEA 리스크 보고서</span>
+                    <span class="modal-chip">변화 관리 계획</span>
+                    <span class="modal-chip">전사 확산 로드맵</span>
+                </div>
+            `,
+            en: `
+                <p>Validates the built solution in a real environment. Performs <strong>pilot operation, ROI verification (NPV/IRR/Payback), and risk analysis (FMEA/Monte Carlo)</strong>, then establishes enterprise-wide scale-out strategy based on success cases.</p>
+
+                <h3>3 Core Validation Activities</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Activity</th><th>Content</th><th>Key Criteria</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Pilot Operation</strong></td><td>Small-scale real-world testing, user acceptance</td><td>User satisfaction, stability, performance, ROI</td></tr>
+                            <tr><td><strong>Change Management</strong></td><td>Org readiness assessment, training, communication</td><td>Training completion rate, resistance mitigation</td></tr>
+                            <tr><td><strong>Scale-Out</strong></td><td>Phased rollout plan, resource allocation, success metrics</td><td>Dept. adoption rate, conversion rate</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>ROI Verification Metrics</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Metric</th><th>Formula</th><th>Decision Criteria</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ROI %</strong></td><td>(3yr Benefits - Total Cost) / Total Cost × 100</td><td>> 50%: Strongly recommended</td></tr>
+                            <tr><td><strong>NPV</strong></td><td>-Investment + Σ(Annual/(1+0.1)^yr)</td><td>> 0: Worth investing</td></tr>
+                            <tr><td><strong>IRR</strong></td><td>Internal Rate of Return</td><td>> 10%: Good</td></tr>
+                            <tr><td><strong>Payback</strong></td><td>Initial Investment / (Annual Benefit/12)</td><td>< 24 months: Good</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Risk Analysis Framework</h3>
+                <ul>
+                    <li><strong>FMEA</strong> — Failure Mode & Effects Analysis. RPN = Severity(1-10) × Occurrence(1-10) × Detection(1-10)</li>
+                    <li><strong>Monte Carlo Simulation</strong> — Probabilistic risk quantification, worst/best/expected scenarios</li>
+                    <li><strong>4 Risk Categories</strong> — Technical, organizational, business, operational risks rated by Probability×Impact (1-25)</li>
+                    <li><strong>Go/No-Go Decision</strong> — Risk Assessor agent's comprehensive judgment with mitigation strategies</li>
+                </ul>
+
+                <h3>Deliverables</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Pilot Execution Report</span>
+                    <span class="modal-chip">ROI/NPV/IRR Analysis</span>
+                    <span class="modal-chip">FMEA Risk Report</span>
+                    <span class="modal-chip">Change Management Plan</span>
+                    <span class="modal-chip">Scale-Out Roadmap</span>
+                </div>
+            `
+        }
+    },
+
+    'stage-operate': {
+        icon: '⚙️',
+        title: { ko: 'Stage 5: 운영 & 지속적 개선', en: 'Stage 5: Operations & Continuous Improvement' },
+        body: {
+            ko: `
+                <p>AI 솔루션의 <strong>지속적 운영, 성과 모니터링, 거버넌스 리뷰</strong>를 수행하는 최종 단계입니다. ISO 38500 기반 EDM(Evaluate-Direct-Monitor) 사이클과 ISO 42001 AI 관리 시스템을 적용하여 지속 가능한 AI 운영 체계를 구축합니다.</p>
+
+                <h3>3대 운영 활동</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>활동</th><th>내용</th><th>주기</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>모니터링</strong></td><td>실시간 성능 모니터링, 데이터 드리프트 감지, 모델 성능 저하 추적</td><td>시간/일/주 단위</td></tr>
+                            <tr><td><strong>지속 개선</strong></td><td>피드백 수집(사용자/모니터링/전문가/A/B테스트), 모델 재학습, 프로세스 최적화</td><td>월/분기 단위</td></tr>
+                            <tr><td><strong>거버넌스 리뷰</strong></td><td>컴플라이언스 감사, 윤리 위원회 리뷰, 정책 효과 평가</td><td>분기/반기/연 단위</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>ISO 38500 EDM 사이클</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>단계</th><th>활동 (6개씩)</th><th>목적</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Evaluate</strong></td><td>현황 평가, 기회 분석, 리스크 식별, 이해관계자 요구, 외부 환경, 기술 동향</td><td>현 상태 객관적 평가</td></tr>
+                            <tr><td><strong>Direct</strong></td><td>방향 설정, 정책 수립, 이니셔티브 승인, 자원 배분, 우선순위, 위임</td><td>전략적 방향 제시</td></tr>
+                            <tr><td><strong>Monitor</strong></td><td>KPI 추적, 컴플라이언스 감사, 효과 평가, 위험 모니터링, 보고, 피드백</td><td>성과 및 준수 확인</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>성과 모니터링 지표</h3>
+                <ul>
+                    <li><strong>모델 성능</strong> — Accuracy, Precision, Recall, F1-Score, 데이터 드리프트(K-S 검정)</li>
+                    <li><strong>시스템 성능</strong> — 응답 지연(p50/p95/p99), 처리량, 가용률(%)</li>
+                    <li><strong>거버넌스</strong> — 컴플라이언스 점수, 윤리 리뷰 이행률, 감사 지적 해소율</li>
+                    <li><strong>공정성</strong> — Demographic Parity(80%+), Equal Opportunity, Calibration, 5종 편향 감지</li>
+                </ul>
+
+                <h3>적용 ISO 표준</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>표준</th><th>적용 영역</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ISO/IEC 38500</strong></td><td>IT 거버넌스 — EDM 사이클, 6대 원칙(전략/역할/혁신/의사결정/컴플라이언스/윤리)</td></tr>
+                            <tr><td><strong>ISO/IEC 42001</strong></td><td>AI 관리 시스템 — AIMS 체크리스트, 정책 준수 모니터링</td></tr>
+                            <tr><td><strong>ISO/IEC 24030</strong></td><td>AI 역량 평가 — 공정성 지표, 편향 감지 및 완화</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>산출물</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">월/분기 모니터링 보고서</span>
+                    <span class="modal-chip">지속 개선 계획</span>
+                    <span class="modal-chip">거버넌스 감사 보고서</span>
+                    <span class="modal-chip">EDM 사이클 현황</span>
+                    <span class="modal-chip">컴플라이언스 인증</span>
+                </div>
+            `,
+            en: `
+                <p>The final stage performing <strong>continuous operations, performance monitoring, and governance review</strong>. Establishes a sustainable AI operations framework by applying ISO 38500 EDM (Evaluate-Direct-Monitor) cycle and ISO 42001 AI management system.</p>
+
+                <h3>3 Core Operational Activities</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Activity</th><th>Content</th><th>Frequency</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Monitoring</strong></td><td>Real-time performance, data drift detection, model degradation tracking</td><td>Hourly/daily/weekly</td></tr>
+                            <tr><td><strong>Continuous Improvement</strong></td><td>Feedback collection (user/monitoring/expert/A-B test), model retraining, optimization</td><td>Monthly/quarterly</td></tr>
+                            <tr><td><strong>Governance Review</strong></td><td>Compliance audit, ethics committee review, policy effectiveness assessment</td><td>Quarterly/semi-annual/annual</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>ISO 38500 EDM Cycle</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Phase</th><th>Activities (6 each)</th><th>Purpose</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Evaluate</strong></td><td>Current state, opportunities, risks, stakeholder needs, environment, tech trends</td><td>Objective assessment</td></tr>
+                            <tr><td><strong>Direct</strong></td><td>Direction setting, policies, initiative approval, resources, priorities, delegation</td><td>Strategic guidance</td></tr>
+                            <tr><td><strong>Monitor</strong></td><td>KPI tracking, compliance audit, effectiveness, risk monitoring, reporting, feedback</td><td>Performance & compliance</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Performance Monitoring Metrics</h3>
+                <ul>
+                    <li><strong>Model Performance</strong> — Accuracy, Precision, Recall, F1-Score, data drift (K-S test)</li>
+                    <li><strong>System Performance</strong> — Response latency (p50/p95/p99), throughput, availability %</li>
+                    <li><strong>Governance</strong> — Compliance score, ethics review rate, audit resolution rate</li>
+                    <li><strong>Fairness</strong> — Demographic Parity (80%+), Equal Opportunity, Calibration, 5 bias types</li>
+                </ul>
+
+                <h3>Applied ISO Standards</h3>
+                <div class="modal-table-wrap">
+                    <table class="modal-table">
+                        <thead>
+                            <tr><th>Standard</th><th>Applied Area</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>ISO/IEC 38500</strong></td><td>IT Governance — EDM cycle, 6 principles (Strategy/Roles/Innovation/Decisions/Compliance/Ethics)</td></tr>
+                            <tr><td><strong>ISO/IEC 42001</strong></td><td>AI Management System — AIMS checklist, policy compliance monitoring</td></tr>
+                            <tr><td><strong>ISO/IEC 24030</strong></td><td>AI Capability Assessment — Fairness metrics, bias detection & mitigation</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Deliverables</h3>
+                <div class="modal-chips">
+                    <span class="modal-chip">Monthly/Quarterly Report</span>
+                    <span class="modal-chip">Continuous Improvement Plan</span>
+                    <span class="modal-chip">Governance Audit Report</span>
+                    <span class="modal-chip">EDM Cycle Status</span>
+                    <span class="modal-chip">Compliance Certification</span>
+                </div>
+            `
+        }
+    },
+
+    // ========================================
     // Overview Detail Data
     // ========================================
 
